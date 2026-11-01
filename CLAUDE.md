@@ -26,7 +26,8 @@ Site vitrine d'URBAIN V (rénovation immobilière de prestige, 163 cours de la L
 
 ## Contenu : règles du propriétaire
 
-- Ne pas parler de Novelia (Novelia Résidences, Novelia Aménagement) ni de CGBI sur le site. Seule exception : la phrase sur l'origine dans La Maison (« URBAIN V est née au sein du Groupe Novelia… »).
+- Ne pas parler de Novelia (Novelia Résidences, Novelia Aménagement) ni de CGBI sur le site. Deux exceptions seulement : la phrase sur l'origine dans La Maison (« URBAIN V est née au sein du Groupe Novelia… ») et les mentions légales, où le site est édité par GROUPE NOVELIA, qui exploite la marque commerciale URBAIN V (déposée à l'INPI, n° national 24 5031295).
+- Mentions légales : éditeur GROUPE NOVELIA (SARL au capital de 2 700 000 €, RCS Grenoble 948 146 691, siège 53 chemin du Boutey, 38560 Champ-sur-Drac, d'après Pappers) ; directeur de la publication : Stéphane Jouglard ; hébergeur : OVH SAS.
 - Aucune réalisation n'est encore livrée : les photos Unsplash sont des illustrations, jamais présentées comme des opérations URBAIN V. Tenir à jour la liste des photographes dans les mentions légales.
 - Ne pas inventer de chiffres, de références ou de promesses. Les informations fiscales (page Investir) sont datées et accompagnées d'un avertissement : les revérifier à chaque loi de finances.
-- Coordonnées : téléphone et e-mail encore « à compléter ». Formulaires en mode démonstration (aucun envoi) : ne jamais afficher qu'un message a été envoyé tant qu'un envoi réel n'est pas branché.
+- Coordonnées : e-mail contact@urbain-v.fr (boîte à créer chez OVH, opérationnelle une fois le domaine basculé sur les serveurs DNS d'OVH) ; téléphone encore « à compléter ». Formulaires en mode démonstration (aucun envoi) : ne jamais afficher qu'un message a été envoyé tant qu'un envoi réel n'est pas branché.

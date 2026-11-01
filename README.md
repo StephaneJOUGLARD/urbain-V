@@ -28,9 +28,9 @@ Référencement : `sitemap.xml`, `robots.txt`, titres et descriptions propres à
 
 ## À compléter avant la mise en ligne
 
-- Téléphone et e-mail de contact (page Contact).
-- Mentions légales : forme sociale, capital, SIREN, directeur de la publication, hébergeur, e-mail pour les données personnelles.
-- Formulaires : ils affichent pour l'instant un message de démonstration ; ils pourront envoyer un e-mail via l'hébergement OVH une fois l'adresse de réception choisie.
+- Téléphone de contact (page Contact et mentions légales).
+- Créer la boîte contact@urbain-v.fr dans l'espace client OVH ; elle recevra les messages une fois le domaine basculé sur les serveurs DNS d'OVH.
+- Formulaires : ils affichent pour l'instant un message de démonstration ; ils pourront envoyer un e-mail à contact@urbain-v.fr via l'hébergement OVH.
 - Après activation du certificat SSL : activer la redirection HTTPS dans `.htaccess`.
 
 ## Photographies
