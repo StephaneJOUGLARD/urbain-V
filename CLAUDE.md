@@ -5,6 +5,7 @@ Site vitrine d'URBAIN V (rénovation immobilière de prestige, 163 cours de la L
 ## Déploiement
 
 - La branche `main` est déployée automatiquement sur l'hébergement OVH (intégration Git + webhook GitHub). Tout ce qui est publié sur `main` part en ligne : ne publier qu'un site vérifié.
+- Le propriétaire veut modifier son site directement depuis Claude, avec mise en ligne automatique : une fois la modification contrôlée (`python3 tools/verifier.py` et rendu), la publier directement sur `main`, sans demande de fusion à valider. Lui indiquer ensuite en une phrase ce qui a été mis en ligne.
 - Site statique, sans étape de compilation : les fichiers du dépôt sont servis tels quels par Apache (`.htaccess` à la racine).
 - Après une modification de `assets/css/site.css` ou `assets/js/site.js`, incrémenter le paramètre `?v=` de leurs liens dans **toutes** les pages (cache navigateur d'un mois).
 
@@ -30,4 +31,4 @@ Site vitrine d'URBAIN V (rénovation immobilière de prestige, 163 cours de la L
 - Mentions légales : éditeur GROUPE NOVELIA (SARL au capital de 2 700 000 €, RCS Grenoble 948 146 691, siège 53 chemin du Boutey, 38560 Champ-sur-Drac, d'après Pappers) ; directeur de la publication : Stéphane Jouglard ; hébergeur : OVH SAS.
 - Aucune réalisation n'est encore livrée : les photos Unsplash sont des illustrations, jamais présentées comme des opérations URBAIN V. Tenir à jour la liste des photographes dans les mentions légales.
 - Ne pas inventer de chiffres, de références ou de promesses. Les informations fiscales (page Investir) sont datées et accompagnées d'un avertissement : les revérifier à chaque loi de finances.
-- Coordonnées : e-mail contact@urbain-v.fr (boîte à créer chez OVH, opérationnelle une fois le domaine basculé sur les serveurs DNS d'OVH) ; téléphone 06 83 48 06 15 (page Contact et mentions légales). Formulaires en mode démonstration (aucun envoi) : ne jamais afficher qu'un message a été envoyé tant qu'un envoi réel n'est pas branché.
+- Coordonnées : e-mail contact@urbain-v.fr (boîte à créer chez OVH, opérationnelle une fois le domaine basculé sur les serveurs DNS d'OVH) ; téléphone 06 83 48 06 15 (page Contact, mentions légales et pied de page). Formulaires en mode démonstration (aucun envoi) : ne jamais afficher qu'un message a été envoyé tant qu'un envoi réel n'est pas branché.
