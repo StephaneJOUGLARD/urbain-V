@@ -1,0 +1,116 @@
+/* URBAIN V — feuille de style commune des documents imprimables (A4)
+   Charte : anthracite #2B363F, vert #439E70 ; EB Garamond, Roboto Slab, Jost. */
+@page { size: 210mm 297mm; margin: 0; }
+
+:root {
+  --ink: #2B363F; --ink-2: #4F5B64; --ink-3: #626E77;
+  --paper: #F4F6F5; --paper-2: #E7ECEA; --line: #CAD3D1;
+  --accent: #2A7350; --brand: #439E70; --accent-soft: #DCEDE4;
+  --night: #2B363F; --night-2: #34414B; --night-line: #45535E;
+  --on-night: #F4F6F5; --on-night-2: #B9C3C9; --accent-night: #6FC398;
+  --dpe-a: #009C6D; --dpe-b: #52B153; --dpe-c: #78BD76; --dpe-d: #F4E70F; --dpe-e: #F0B50F; --dpe-f: #EB8235; --dpe-g: #D7221F; --dpe-ink: #14201C;
+  --f-title: 'EB Garamond', Georgia, serif;
+  --f-inscr: 'Roboto Slab', Georgia, serif;
+  --f-text: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+  --mx: 17mm;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: var(--f-text); font-size: 9.2pt; line-height: 1.52; color: var(--ink-2); font-weight: 400; font-kerning: normal; font-variant-numeric: lining-nums; }
+img { display: block; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+
+.page { width: 210mm; height: 297mm; position: relative; overflow: hidden; break-after: page; background: var(--paper); }
+.page:last-child { break-after: auto; }
+.abs { position: absolute; }
+
+/* ---- Typographie ---- */
+.eyebrow { font-family: var(--f-inscr); font-size: 6.5pt; letter-spacing: .24em; text-transform: uppercase; color: var(--accent); display: flex; align-items: center; gap: 2.6mm; line-height: 1.2; }
+.eyebrow::before { content: ""; width: 8mm; height: .6pt; background: currentColor; flex: none; }
+.eyebrow b { font-weight: 400; color: var(--ink); }
+.eyebrow.plain::before { display: none; }
+.night .eyebrow, .eyebrow.light { color: var(--accent-night); }
+.night .eyebrow b { color: var(--on-night); }
+
+h1, h2, h3, h4 { font-family: var(--f-title); color: var(--ink); font-weight: 500; letter-spacing: -.004em; }
+h2 { font-size: 27pt; line-height: 1.06; margin-top: 3.6mm; }
+h3 { font-size: 17pt; line-height: 1.12; margin-top: 2.6mm; }
+h4 { font-size: 12.5pt; line-height: 1.16; }
+.night h1, .night h2, .night h3, .night h4 { color: #fff; }
+.lead { font-size: 10.6pt; line-height: 1.5; color: var(--ink); margin-top: 4mm; }
+.night .lead { color: var(--on-night); }
+p + p { margin-top: 2.2mm; }
+.night { background: var(--night); color: var(--on-night-2); }
+
+/* ---- Planches (cadres photo et dessin) ---- */
+.frame { position: relative; background: var(--paper-2); overflow: hidden; --plate-bg: var(--paper-2); --plate-acc: var(--accent); --glass: rgba(43, 54, 63, .08); }
+.frame::before, .frame::after { content: ""; position: absolute; width: 3.2mm; height: 3.2mm; border: .6pt solid var(--accent); opacity: .8; z-index: 2; }
+.frame::before { top: 2.4mm; left: 2.4mm; border-right: 0; border-bottom: 0; }
+.frame::after { bottom: 2.4mm; right: 2.4mm; border-left: 0; border-top: 0; }
+.frame.photo::before, .frame.photo::after { border-color: #fff; opacity: .9; }
+.frame.bare::before, .frame.bare::after { display: none; }
+.frame > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.frame .no { position: absolute; top: 2.5mm; right: 3mm; z-index: 3; font-family: var(--f-inscr); font-size: 5.8pt; letter-spacing: .16em; color: var(--accent); }
+.frame.photo .no { color: #fff; text-shadow: 0 .3mm 1.4mm rgba(0, 0, 0, .5); }
+.frame.on-paper { background: var(--paper); --plate-bg: var(--paper); }
+.cap { display: flex; gap: 2.2mm; align-items: baseline; font-size: 5.9pt; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); line-height: 1.45; margin-top: 2mm; }
+.cap .pl { font-family: var(--f-inscr); color: var(--accent); letter-spacing: .14em; flex: none; }
+.night .cap { color: var(--on-night-2); }
+.night .cap .pl { color: var(--accent-night); }
+
+/* Dessins repris des planches du site */
+.drw { position: absolute; inset: 7%; width: 86%; height: 86%; overflow: visible; color: var(--ink); }
+.drw path { fill: none; stroke: currentColor; stroke-width: var(--sw); stroke-linecap: round; stroke-linejoin: round; }
+.drw .thin { stroke-width: calc(var(--sw) * .72); }
+.drw .hair { stroke-width: calc(var(--sw) * .45); }
+.drw .bold { stroke-width: calc(var(--sw) * 2.2); }
+.drw .mask { fill: var(--plate-bg); }
+.drw .glass { fill: var(--glass); }
+.drw .cut { fill: var(--plate-bg); stroke: none; }
+.drw .acc { stroke: var(--plate-acc); fill: var(--plate-acc); }
+.drw .acc-hair { stroke: var(--plate-acc); stroke-width: calc(var(--sw) * .45); }
+.drw .acc-s { stroke: var(--plate-acc); stroke-width: calc(var(--sw) * 1.3); }
+.drw .hatch { stroke-width: .26; }
+.drw text { font-family: var(--f-text); font-size: var(--fs, 4.4px); fill: currentColor; letter-spacing: .03em; stroke: none; }
+.drw text.acc-t { fill: var(--plate-acc); }
+.drw text.sm { font-size: calc(var(--fs, 4.4px) * .76); opacity: .85; }
+.drw text.cap { font-family: var(--f-inscr); font-size: calc(var(--fs, 4.4px) * .9); letter-spacing: .18em; }
+
+/* ---- Folio ---- */
+.folio { position: absolute; left: var(--mx); right: var(--mx); bottom: 9mm; display: flex; justify-content: space-between; align-items: baseline; font-family: var(--f-inscr); font-size: 5.6pt; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-3); }
+.folio .pg { color: var(--accent); letter-spacing: .14em; }
+.folio.light { color: var(--on-night-2); }
+.folio.light .pg { color: var(--accent-night); }
+
+/* ---- Listes et filets ---- */
+.rule-list li { border-top: .6pt solid var(--line); padding: 2.2mm 0; }
+.rule-list li:last-child { border-bottom: .6pt solid var(--line); }
+.dot-list li { position: relative; padding: 1.8mm 0 1.8mm 5.5mm; border-top: .6pt solid var(--line); }
+.dot-list li::before { content: ""; position: absolute; left: .4mm; top: 3.5mm; width: 1.7mm; height: 1.7mm; background: var(--brand); transform: rotate(45deg); }
+.dot-list li:last-child { border-bottom: .6pt solid var(--line); }
+.night .dot-list li { border-color: var(--night-line); }
+
+/* ---- Échelle DPE (reprise du site) ---- */
+.dpe { display: grid; gap: 1.3mm; font-variant-numeric: tabular-nums; }
+.dpe-row { display: grid; grid-template-columns: minmax(0, 1fr) 19mm; align-items: center; gap: 2.6mm; }
+.dpe-bar { justify-self: start; height: 5mm; width: var(--w); min-width: 9mm; background: var(--c); color: var(--t, #fff); clip-path: polygon(0 0, calc(100% - 2.4mm) 0, 100% 50%, calc(100% - 2.4mm) 100%, 0 100%); display: flex; align-items: center; padding-left: 2.2mm; font: 600 7.6pt/1 var(--f-text); }
+.dpe-note { font-size: 6.4pt; line-height: 1.2; color: var(--ink-2); }
+.dpe-note b { display: block; font-weight: 600; color: var(--ink); font-size: 7.2pt; }
+
+/* ---- Carte ---- */
+.map { width: 100%; height: 100%; overflow: visible; }
+.map .map-land { fill: #fff; }
+.map .map-dep { fill: none; stroke: var(--line); stroke-width: 1.1; stroke-linejoin: round; }
+.map .map-dau { fill: var(--brand); stroke: #fff; stroke-width: 1.6; }
+.map .map-ring { fill: none; stroke: var(--brand); stroke-width: 1.4; stroke-dasharray: 2 6; stroke-linecap: round; opacity: .8; }
+.map .map-city { fill: var(--ink-3); }
+.map .map-city-t { font-family: var(--f-text); font-size: 19px; fill: var(--ink-3); }
+.map .map-lead { fill: none; stroke: var(--ink); stroke-width: 1.1; }
+.map .map-lead-dot { fill: var(--ink); stroke: #fff; stroke-width: 1; }
+.map .map-dep-t { font-family: var(--f-inscr); font-size: 18px; letter-spacing: .18em; fill: var(--accent); }
+.map .map-gre-t { font-family: var(--f-title); font-size: 30px; fill: var(--ink); }
+.map .map-gre-s { font-family: var(--f-inscr); font-size: 14px; letter-spacing: .2em; fill: var(--ink-3); }
+.map .map-star path { fill: var(--ink); stroke: #fff; stroke-width: 2.4; paint-order: stroke; }
+.map .map-zone-t { font-family: var(--f-inscr); font-size: 19px; letter-spacing: .3em; fill: var(--accent); }

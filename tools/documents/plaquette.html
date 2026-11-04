@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>URBAIN V — Plaquette de présentation 2026</title>
+<meta name="author" content="URBAIN V">
+<meta name="description" content="URBAIN V, rénovation immobilière de prestige en Dauphiné et dans le grand quart sud-est de la France.">
+<link rel="stylesheet" href="node_modules/@fontsource/eb-garamond/400.css">
+<link rel="stylesheet" href="node_modules/@fontsource/eb-garamond/400-italic.css">
+<link rel="stylesheet" href="node_modules/@fontsource/eb-garamond/500.css">
+<link rel="stylesheet" href="node_modules/@fontsource/roboto-slab/400.css">
+<link rel="stylesheet" href="node_modules/@fontsource/jost/300.css">
+<link rel="stylesheet" href="node_modules/@fontsource/jost/400.css">
+<link rel="stylesheet" href="node_modules/@fontsource/jost/500.css">
+<link rel="stylesheet" href="node_modules/@fontsource/jost/600.css">
+<link rel="stylesheet" href="print.css">
+<style>
+/* 1 — Couverture */
+.cover { background: var(--night); }
+/* le dégradé (haut intact, puis vert approfondi et anthracite) est intégré à la photo */
+.cover-photo { position: absolute; inset: 0; width: 100%; height: 100%; }
+.cover-body { position: absolute; left: var(--mx); right: var(--mx); top: 189mm; }
+.cover-kicker { font-family: var(--f-inscr); font-size: 7pt; letter-spacing: .28em; text-transform: uppercase; color: var(--accent-soft); }
+.cover h1 { color: #fff; font-size: 46pt; line-height: 1.0; margin-top: 5mm; }
+.cover-terr { margin-top: 5mm; font-size: 10pt; color: var(--accent-soft); }
+.cover-foot { position: absolute; left: var(--mx); right: var(--mx); bottom: 17mm; padding-top: 6mm; border-top: .6pt solid rgba(255,255,255,.26); display: flex; justify-content: space-between; align-items: flex-end; }
+.cover-logo { width: 44mm; height: auto; }
+.cover-doc { text-align: right; font-family: var(--f-inscr); font-size: 6.2pt; letter-spacing: .24em; text-transform: uppercase; color: var(--on-night-2); line-height: 2.1; }
+.cover-doc b { font-weight: 400; color: #fff; letter-spacing: .3em; }
+.cover-credit { position: absolute; right: var(--mx); bottom: 9mm; font-family: var(--f-inscr); font-size: 5.2pt; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.5); }
+
+/* 2 — Éditorial et sommaire */
+.p2-main { position: absolute; left: var(--mx); top: 24mm; width: 109mm; }
+.p2-main h2 { font-size: 25pt; }
+.p2-text { margin-top: 7mm; font-size: 9.5pt; line-height: 1.64; }
+.p2-text p + p { margin-top: 3mm; }
+.dropcap::first-letter { font-family: var(--f-title); float: left; font-size: 40pt; line-height: .8; padding: 1.6mm 2.2mm 0 0; color: var(--brand); }
+.sign { margin-top: 8mm; padding-top: 4mm; border-top: .6pt solid var(--line); width: 62mm; }
+.sign-name { font-family: var(--f-title); font-style: italic; font-size: 16pt; color: var(--ink); line-height: 1.1; }
+.sign-role { font-family: var(--f-inscr); font-size: 6pt; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); margin-top: 1.6mm; }
+.p2-side { position: absolute; right: 0; top: 0; bottom: 0; width: 66mm; }
+.p2-photo { position: absolute; left: 0; right: 0; top: 0; height: 96mm; }
+.p2-side .cap { position: absolute; left: 10mm; right: 10mm; top: 98.5mm; }
+.p2-toc { position: absolute; left: 10mm; right: 10mm; top: 118mm; }
+.toc { margin-top: 5mm; }
+.toc li { display: grid; grid-template-columns: 8.5mm 1fr 5mm; column-gap: 1.5mm; align-items: baseline; padding: 2.5mm 0; border-bottom: .5pt solid var(--night-line); }
+.toc li:first-child { border-top: .5pt solid var(--night-line); }
+.toc .n { font-family: var(--f-inscr); font-size: 6.2pt; letter-spacing: .12em; color: var(--accent-night); }
+.toc .t { font-family: var(--f-title); font-size: 12.4pt; color: var(--on-night); line-height: 1.15; }
+.toc .p { font-family: var(--f-inscr); font-size: 6.2pt; color: var(--on-night-2); text-align: right; }
+.p2 .folio { right: calc(66mm + var(--mx)); }
+
+/* 3 — La Maison */
+.p3-text { position: absolute; left: var(--mx); top: 22mm; width: 100mm; }
+.p3-text .sub { margin-top: 9mm; }
+.p3-text h3 { margin-bottom: 3mm; }
+.origin { margin-top: 4.5mm !important; padding: 1mm 0 1mm 4.5mm; border-left: 1.4pt solid var(--brand); font-family: var(--f-title); font-style: italic; font-size: 12pt; line-height: 1.35; color: var(--ink); }
+.p3-photo { position: absolute; right: 0; top: 0; width: 76mm; height: 190mm; }
+.p3-photo-cap { position: absolute; left: calc(134mm + 4mm); right: var(--mx); top: 192.5mm; }
+.p3-band { position: absolute; left: 0; right: 0; top: 206mm; bottom: 0; background: var(--paper-2); }
+.p3-name { position: absolute; left: var(--mx); top: 13mm; width: 104mm; }
+.p3-name h3 { margin-bottom: 3mm; }
+.p3-logo { position: absolute; right: var(--mx); top: 13mm; width: 60mm; height: 44mm; }
+.p3-logo img { position: absolute; inset: auto; left: 50%; top: 50%; width: 66%; height: auto; object-fit: contain; transform: translate(-50%, -50%); }
+.p3-logo-cap { position: absolute; right: var(--mx); width: 60mm; top: 59mm; }
+
+/* 4 — Engagements */
+.p4-head { position: absolute; left: var(--mx); top: 22mm; width: 104mm; }
+.p4-photo { position: absolute; right: var(--mx); top: 22mm; width: 56mm; height: 60mm; }
+.p4-photo-cap { position: absolute; right: var(--mx); width: 56mm; top: 84mm; }
+.eng { position: absolute; left: var(--mx); right: var(--mx); top: 99mm; }
+.eng li { display: grid; grid-template-columns: 14mm 54mm 1fr; gap: 0 5mm; padding: 4mm 0 4.2mm; border-top: .6pt solid var(--line); align-items: baseline; }
+.eng li:last-child { border-bottom: .6pt solid var(--line); }
+.eng .num { font-family: var(--f-title); font-size: 19pt; color: var(--brand); line-height: 1; }
+.eng h4 { font-size: 13pt; }
+.p4-band { position: absolute; left: 0; right: 0; bottom: 0; height: 86mm; padding: 12mm var(--mx) 0; }
+.p4-band h3 { font-size: 19pt; }
+.partners { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 8mm; margin-top: 7mm; }
+.partners div { border-top: .6pt solid var(--night-line); padding: 2.8mm 0 4.2mm; font-family: var(--f-title); font-size: 12.6pt; color: var(--on-night); line-height: 1.2; }
+
+/* 5 — Signature et typologies */
+.p5-head { position: absolute; left: var(--mx); right: var(--mx); top: 22mm; }
+.p5-head h2 { max-width: 140mm; }
+.trio { position: absolute; left: var(--mx); right: var(--mx); top: 63mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8mm; }
+.trio > div { border-top: 1.2pt solid var(--brand); padding-top: 3.4mm; }
+.trio .k { font-family: var(--f-inscr); font-size: 6.2pt; letter-spacing: .2em; color: var(--accent); }
+.trio h4 { margin: 1.6mm 0 2mm; font-size: 13.4pt; }
+.trio p { font-size: 8.7pt; }
+.p5-band { position: absolute; left: 0; right: 0; top: 121mm; bottom: 0; background: var(--paper-2); padding: 12mm var(--mx) 0; }
+.p5-band .intro { display: grid; grid-template-columns: 1fr 74mm; gap: 10mm; align-items: end; }
+.p5-band .intro p { font-size: 9pt; }
+.types { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5mm; margin-top: 8mm; }
+.types .frame { height: 60mm; }
+.types h4 { font-size: 12.6pt; margin: 2.6mm 0 1.6mm; }
+.types p { font-size: 8.2pt; line-height: 1.45; }
+
+/* 6 — Méthode */
+.p6-head { position: absolute; left: var(--mx); top: 22mm; width: 95mm; }
+.p6-plate { position: absolute; right: var(--mx); top: 22mm; width: 70mm; height: 86mm; }
+.p6-plate-cap { position: absolute; right: var(--mx); width: 70mm; top: 110mm; }
+.steps { position: absolute; left: var(--mx); right: var(--mx); top: 126mm; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, auto); grid-auto-flow: column; gap: 0 10mm; }
+.step { display: grid; grid-template-columns: 12mm 1fr; padding: 3.8mm 0 4.2mm; border-top: .6pt solid var(--line); }
+.step:nth-child(3), .step:nth-child(6) { border-bottom: .6pt solid var(--line); }
+.step .num { font-family: var(--f-title); font-size: 18pt; color: var(--brand); line-height: 1; }
+.step h4 { font-size: 12.4pt; margin-bottom: 1.4mm; }
+.step p { font-size: 8.3pt; line-height: 1.46; }
+.step .liv { margin-top: 1.8mm; font-family: var(--f-inscr); font-size: 5.8pt; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); line-height: 1.5; }
+.step .liv span { color: var(--ink-3); }
+
+/* 7 — Métiers d'art */
+.p7-head { position: absolute; left: var(--mx); right: var(--mx); top: 22mm; }
+.p7-head .lead { max-width: 150mm; }
+.strip { position: absolute; left: var(--mx); right: var(--mx); top: 74mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; }
+.strip .frame { height: 38mm; }
+.p7-sub { position: absolute; left: var(--mx); right: var(--mx); top: 129mm; display: grid; grid-template-columns: 82mm 1fr; gap: 10mm; align-items: end; }
+.p7-sub h3 { font-size: 17pt; }
+.p7-sub p { font-size: 8.9pt; }
+.crafts { position: absolute; left: var(--mx); right: var(--mx); top: 157mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: 6mm 6mm; }
+.craft .frame { height: 31mm; }
+.craft h4 { font-size: 12pt; margin: 2.4mm 0 1.2mm; }
+.craft p { font-size: 7.9pt; line-height: 1.42; }
+
+/* 8 — Performance */
+.p8-head { position: absolute; left: var(--mx); top: 22mm; width: 98mm; }
+.p8-head p.t { margin-top: 4mm; font-size: 9.2pt; }
+.perf { position: absolute; left: var(--mx); top: 86mm; width: 98mm; }
+.quote { position: absolute; left: var(--mx); top: 156mm; width: 98mm; padding-left: 6mm; border-left: 1.4pt solid var(--brand); }
+.quote p { font-family: var(--f-title); font-style: italic; font-size: 16pt; line-height: 1.3; color: var(--ink); }
+.quote .by { margin-top: 3mm; font-family: var(--f-inscr); font-style: normal; font-size: 6pt; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); }
+.perf li { display: grid; grid-template-columns: 30mm 1fr; gap: 4mm; padding: 3.2mm 0; border-top: .6pt solid var(--line); align-items: baseline; }
+.perf li:last-child { border-bottom: .6pt solid var(--line); }
+.perf h4 { font-size: 12.4pt; }
+.perf p { font-size: 8.5pt; }
+.p8-photo { position: absolute; right: var(--mx); top: 22mm; width: 68mm; height: 50mm; }
+.p8-photo-cap { position: absolute; right: var(--mx); top: 74mm; width: 68mm; }
+.dpe-card { position: absolute; right: var(--mx); top: 90mm; width: 68mm; background: var(--paper-2); padding: 5.5mm 5.5mm 5mm; }
+.dpe-card .t { font-family: var(--f-inscr); font-size: 6.2pt; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); }
+.dpe-card .l { font-family: var(--f-title); font-size: 12.5pt; line-height: 1.2; color: var(--ink); margin: 2mm 0 3.5mm; }
+.dpe-card .f { font-size: 7.1pt; line-height: 1.45; margin-top: 3.5mm; }
+.guar { position: absolute; left: 0; right: 0; bottom: 0; height: 74mm; padding: 13mm var(--mx) 0; }
+.guar h3 { font-size: 19pt; }
+.guar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8mm; margin-top: 6.5mm; }
+.guar-grid > div { border-top: .6pt solid var(--night-line); padding-top: 3.4mm; }
+.guar-grid .y { font-family: var(--f-title); font-size: 27pt; color: var(--accent-night); line-height: 1; }
+.guar-grid p { color: var(--on-night); font-size: 8.8pt; margin-top: 1.8mm; }
+
+/* 9 — Territoire */
+.p9-head { position: absolute; left: var(--mx); right: var(--mx); top: 22mm; }
+.p9-head h2 { max-width: 150mm; }
+.p9-map { position: absolute; left: var(--mx); right: var(--mx); top: 62mm; height: 124mm; }
+.p9-map-cap { position: absolute; left: var(--mx); right: var(--mx); top: 188mm; }
+.p9-text { position: absolute; left: var(--mx); right: var(--mx); top: 201mm; display: grid; grid-template-columns: 1fr 1fr; gap: 9mm; font-size: 9.2pt; }
+.facts { position: absolute; left: var(--mx); right: var(--mx); top: 236mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8mm; }
+.facts > div { border-top: 1.2pt solid var(--brand); padding-top: 3mm; }
+.facts h4 { font-size: 13pt; }
+.facts p { font-size: 8.3pt; margin-top: 1.4mm; }
+
+/* 10 — Investir */
+.p10-photo { position: absolute; left: 0; right: 0; top: 0; height: 64mm; }
+.p10-cap { position: absolute; left: var(--mx); right: var(--mx); top: 66.5mm; }
+.p10-head { position: absolute; left: var(--mx); right: var(--mx); top: 78mm; }
+.p10-head h2 { max-width: 165mm; font-size: 25pt; }
+.p10-head .lead { max-width: 160mm; font-size: 10pt; }
+.reasons { position: absolute; left: var(--mx); right: var(--mx); top: 123mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8mm; }
+.reasons > div { border-top: 1.2pt solid var(--brand); padding-top: 3mm; }
+.reasons h4 { font-size: 12.6pt; }
+.reasons p { font-size: 8.2pt; margin-top: 1.4mm; line-height: 1.45; }
+.p10-cols { position: absolute; left: var(--mx); right: var(--mx); top: 160mm; display: grid; grid-template-columns: 1fr 1.32fr; gap: 9mm; }
+.p10-cols h3 { font-size: 15pt; margin-bottom: 2.6mm; }
+.p10-cols p { font-size: 8.5pt; }
+.p10-cols .acc-block { margin-top: 5mm; padding-top: 3.6mm; border-top: .6pt solid var(--line); }
+.disp li { display: grid; grid-template-columns: 33mm 1fr; gap: 3mm; padding: 1.7mm 0; border-top: .5pt solid var(--line); font-size: 7.9pt; line-height: 1.38; align-items: baseline; }
+.disp li:last-child { border-bottom: .5pt solid var(--line); }
+.disp b { font-family: var(--f-title); font-weight: 500; font-size: 11pt; color: var(--ink); line-height: 1.1; }
+.callout { margin-top: 3mm; background: var(--accent-soft); padding: 2.6mm 3.6mm; font-size: 7.9pt; color: var(--ink); line-height: 1.4; }
+.callout b { font-weight: 500; }
+.disclaimer { position: absolute; left: var(--mx); right: var(--mx); bottom: 15mm; font-size: 6pt; line-height: 1.45; color: var(--ink-3); }
+
+/* 11 — Opérations */
+.p11-head { position: absolute; left: var(--mx); top: 22mm; width: 104mm; }
+.p11-photo { position: absolute; right: 0; top: 0; width: 72mm; height: 118mm; }
+.p11-photo-cap { position: absolute; left: calc(138mm + 4mm); right: var(--mx); top: 120.5mm; }
+.ap { position: absolute; left: var(--mx); top: 88mm; width: 104mm; }
+.ap h3 { font-size: 15pt; margin-bottom: 2.4mm; }
+.ap p { font-size: 8.8pt; margin-bottom: 3mm; }
+.ap li { font-size: 8.7pt; }
+.p11-plan { position: absolute; right: var(--mx); top: 129mm; width: 55mm; height: 42mm; }
+.p11-plan-cap { position: absolute; right: var(--mx); top: 173mm; width: 55mm; }
+.crit-head { position: absolute; left: var(--mx); top: 160mm; width: 104mm; }
+.crit-head h3 { font-size: 15pt; }
+.crit { position: absolute; left: var(--mx); right: var(--mx); top: 184mm; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6mm; }
+.crit > div { border-top: 1.2pt solid var(--brand); padding-top: 3mm; }
+.crit h4 { font-size: 11.8pt; }
+.crit p { font-size: 7.9pt; margin-top: 1.3mm; line-height: 1.42; }
+.duo { position: absolute; left: var(--mx); right: var(--mx); top: 222mm; display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+.duo > div { padding: 5.5mm 6mm 6mm; background: var(--paper-2); }
+.duo h4 { font-size: 13pt; margin: 2mm 0 1.6mm; }
+.duo p { font-size: 8.1pt; line-height: 1.45; }
+.duo .go { margin-top: 2.4mm; font-family: var(--f-inscr); font-size: 5.9pt; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); }
+.duo .night .go { color: var(--accent-night); }
+.duo > div.night { background: var(--night); }
+
+/* 12 — Quatrième de couverture */
+.back-star { position: absolute; right: -44mm; bottom: -40mm; width: 200mm; height: 200mm; opacity: .07; }
+.back-logo { position: absolute; left: 50%; top: 42mm; width: 76mm; transform: translateX(-50%); }
+.back-base { position: absolute; left: 0; right: 0; top: 91mm; text-align: center; font-family: var(--f-inscr); font-size: 7.6pt; letter-spacing: .34em; text-transform: uppercase; color: #fff; }
+.back-main { position: absolute; left: var(--mx); right: var(--mx); top: 120mm; text-align: center; }
+.back-main .eyebrow { justify-content: center; }
+.back-main .eyebrow::before { display: none; }
+.back-main h3 { font-size: 22pt; margin-top: 3mm; }
+.back-lines { margin-top: 7mm; font-size: 10.4pt; line-height: 1.75; color: var(--on-night); }
+.back-lines .s { color: var(--on-night-2); font-size: 9pt; }
+.back-cta { position: absolute; left: var(--mx); right: var(--mx); top: 194mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; }
+.back-cta a { border: .6pt solid var(--night-line); padding: 4.4mm 4.6mm 4.6mm; display: block; }
+.back-cta b { display: block; font-family: var(--f-title); font-weight: 500; font-size: 12.6pt; color: #fff; line-height: 1.15; }
+.back-cta span { display: block; margin-top: 2mm; font-family: var(--f-inscr); font-size: 5.8pt; letter-spacing: .12em; color: var(--accent-night); }
+.back-legal { position: absolute; left: var(--mx); right: var(--mx); bottom: 13mm; font-size: 5.9pt; line-height: 1.55; color: var(--on-night-2); text-align: center; }
+</style>
+</head>
+<body>
+
+<!-- 1 — Couverture -->
+<section class="page cover">
+  <img class="cover-photo" src="img/hero-cover.jpg" alt="">
+  <div class="cover-body">
+    <p class="cover-kicker">Rénovation immobilière de prestige</p>
+    <h1>Restaurer l’ancien,<br>révéler l’exception.</h1>
+    <p class="cover-terr">Dauphiné &amp; grand quart sud-est de la France</p>
+  </div>
+  <div class="cover-foot">
+    <img class="cover-logo" src="logo/urbain-v-blanc-vert.svg" alt="URBAIN V">
+    <p class="cover-doc"><b>Restaurer · Sublimer · Transmettre</b><br>Plaquette de présentation · Édition 2026</p>
+  </div>
+  <p class="cover-credit">Photographie d’illustration</p>
+</section>
+
+<!-- 2 — Éditorial et sommaire -->
+<section class="page p2">
+  <div class="p2-main">
+    <p class="eyebrow">Éditorial</p>
+    <h2>Redonner un avenir aux immeubles qui ont fait nos villes.</h2>
+    <div class="p2-text">
+      <p class="dropcap">Il suffit de lever les yeux dans les centres anciens du Dauphiné pour mesurer la richesse de leur architecture&nbsp;: façades ordonnancées, décors de ciment moulé, escaliers d’honneur, volumes que l’on ne sait plus construire. Ce patrimoine est fragile. Délaissé, il se dégrade&nbsp;; mal rénové, il perd son caractère.</p>
+      <p>URBAIN V est née d’une conviction&nbsp;: un immeuble ancien mérite mieux qu’une remise à neuf. Il doit être lu avant d’être restauré, confié aux bons artisans, puis adapté avec discernement au confort et aux exigences énergétiques d’aujourd’hui.</p>
+      <p>C’est pourquoi nous conduisons chaque opération de bout en bout, de l’acquisition à la livraison, aux côtés d’architectes du patrimoine et d’artisans des métiers d’art. Un seul interlocuteur, une même exigence, du premier relevé jusqu’à la remise des clés.</p>
+      <p>Ancrés en Dauphiné, nous intervenons dans tout le grand quart sud-est de la France. À ceux qui souhaitent y vivre comme à ceux qui veulent investir, nous voulons proposer des adresses rares, restaurées avec soin, faites pour durer et se transmettre.</p>
+    </div>
+    <div class="sign"><p class="sign-name">Stéphane Jouglard</p><p class="sign-role">Fondateur d’URBAIN V</p></div>
+  </div>
+  <aside class="p2-side night">
+    <div class="frame photo p2-photo bare"><img src="img/escalier-helicoidal.jpg" alt=""></div>
+    <p class="cap"><span class="pl">Pl. I</span><span>Escalier hélicoïdal et garde-corps en ferronnerie</span></p>
+    <div class="p2-toc">
+      <p class="eyebrow">Sommaire</p>
+      <ol class="toc">
+        <li><span class="n">01</span><span class="t">La Maison</span><span class="p">3</span></li>
+        <li><span class="n">02</span><span class="t">Nos engagements</span><span class="p">4</span></li>
+        <li><span class="n">03</span><span class="t">Notre signature</span><span class="p">5</span></li>
+        <li><span class="n">04</span><span class="t">La méthode</span><span class="p">6</span></li>
+        <li><span class="n">05</span><span class="t">Les métiers d’art</span><span class="p">7</span></li>
+        <li><span class="n">06</span><span class="t">Rénover sans dénaturer</span><span class="p">8</span></li>
+        <li><span class="n">07</span><span class="t">Notre territoire</span><span class="p">9</span></li>
+        <li><span class="n">08</span><span class="t">Investir dans l’ancien</span><span class="p">10</span></li>
+        <li><span class="n">09</span><span class="t">Nos premières adresses</span><span class="p">11</span></li>
+      </ol>
+    </div>
+  </aside>
+  <footer class="folio"><span>URBAIN V · Plaquette de présentation</span><span class="pg">02</span></footer>
+</section>
+
+<!-- 3 — La Maison -->
+<section class="page p3">
+  <div class="p3-text">
+    <p class="eyebrow"><b>01</b>La Maison</p>
+    <h2>Bâtir sur ce qui a été bien bâti.</h2>
+    <p class="lead">URBAIN V se consacre à la rénovation immobilière de prestige. Nous restaurons des immeubles et des demeures de caractère en Dauphiné et dans tout le grand quart sud-est de la France.</p>
+    <p class="eyebrow plain sub">Notre vocation</p>
+    <h3>Restaurer, puis transmettre.</h3>
+    <p>Le patrimoine bâti de nos villes est une ressource précieuse. Le restaurer, c’est préserver un héritage architectural, éviter de construire là où ce n’est pas nécessaire et redonner vie aux centres anciens.</p>
+    <p>URBAIN V prend en charge l’ensemble de l’opération&nbsp;: recherche et acquisition des immeubles, conception avec des architectes du patrimoine, travaux, commercialisation et accompagnement des propriétaires.</p>
+    <p class="origin">URBAIN V est née au sein du Groupe Novelia, dont elle prolonge l’expérience de l’immobilier dans les Alpes.</p>
+  </div>
+  <div class="frame photo p3-photo bare"><img src="img/facade-cartouche.jpg" alt="" style="object-position:50% 30%"><span class="no">II</span></div>
+  <p class="cap p3-photo-cap"><span class="pl">Pl. II</span><span>Cartouche sculpté et lucarnes en zinc</span></p>
+  <div class="p3-band">
+    <div class="p3-name">
+      <p class="eyebrow plain">Un nom en héritage</p>
+      <h3>Urbain V, pape bâtisseur.</h3>
+      <p>Né en 1310 à Grizac, en Lozère, Guillaume de Grimoard devient pape en 1362 sous le nom d’Urbain V. Il restaure l’école de médecine de Montpellier et y fonde le collège Saint-Benoît, dont l’église deviendra la cathédrale Saint-Pierre. À Rome, il engage la remise en état d’églises laissées à l’abandon.</p>
+      <p>Notre nom fait écho à cette exigence de bâtisseur.</p>
+    </div>
+    <div class="frame on-paper p3-logo"><img src="logo/urbain-v-couleur.svg" alt="Logotype URBAIN V"><span class="no">III</span></div>
+    <p class="cap p3-logo-cap"><span class="pl">Pl. III</span><span>Le logotype URBAIN V</span></p>
+  </div>
+  <footer class="folio"><span>URBAIN V · Plaquette de présentation</span><span class="pg">03</span></footer>
+</section>
+
+<!-- 4 — Engagements -->
+<section class="page p4">
+  <div class="p4-head">
+    <p class="eyebrow"><b>02</b>Nos engagements</p>
+    <h2>Cinq engagements envers nos acquéreurs.</h2>
+    <p class="lead">Ils guident chacune de nos opérations, du premier rendez-vous jusqu’au terme des garanties.</p>
+  </div>
+  <div class="frame photo p4-photo"><img src="img/volute-pierre.jpg" alt=""><span class="no">IV</span></div>
+  <p class="cap p4-photo-cap"><span class="pl">Pl. IV</span><span>Volute sculptée dans la pierre</span></p>
+  <ol class="eng">
+    <li><span class="num">I</span><h4>Conserver avant de remplacer</h4><p>Chaque décor d’origine est inventorié. Nous le restaurons dès que son état le permet.</p></li>
+    <li><span class="num">II</span><h4>Choisir les meilleurs artisans</h4><p>Les lots patrimoniaux sont confiés à des entreprises spécialisées, sélectionnées pour leurs références.</p></li>
+    <li><span class="num">III</span><h4>S’engager sur la performance</h4><p>L’objectif énergétique est fixé dès la conception et vérifié par un diagnostic après travaux.</p></li>
+    <li><span class="num">IV</span><h4>Informer en toute transparence</h4><p>Prix, prestations et calendrier sont présentés clairement, du premier rendez-vous à la livraison.</p></li>
+    <li><span class="num">V</span><h4>Accompagner dans la durée</h4><p>Nous restons l’interlocuteur des propriétaires après la livraison, pendant toute la durée des garanties.</p></li>
+  </ol>
+  <div class="p4-band night">
+    <p class="eyebrow">Nos partenaires</p>
+    <h3>Une équipe de spécialistes autour de chaque immeuble.</h3>
+    <div class="partners">
+      <div>Architectes du patrimoine</div><div>Bureaux d’études structure et thermique</div><div>Artisans des métiers d’art</div>
+      <div>Conseillers en gestion de patrimoine</div><div>Notaires</div><div>Établissements bancaires</div>
+    </div>
+  </div>
+  <footer class="folio light"><span>URBAIN V · Plaquette de présentation</span><span class="pg">04</span></footer>
+</section>
+
+<!-- 5 — Signature et typologies -->
+<section class="page p5">
+  <div class="p5-head">
+    <p class="eyebrow"><b>03</b>Notre signature</p>
+    <h2>Trois exigences guident chaque restauration.</h2>
+  </div>
+  <div class="trio">
+    <div><p class="k">01</p><h4>Le respect du bâti</h4><p>Diagnostic patrimonial, inventaire des décors, dialogue avec l’Architecte des Bâtiments de France. Nous conservons et restaurons avant de remplacer.</p></div>
+    <div><p class="k">02</p><h4>L’excellence des métiers d’art</h4><p>Chaque savoir-faire est confié à des artisans qualifiés&nbsp;: staff et moulures, parquets, ferronnerie, pierre et menuiseries sur mesure.</p></div>
+    <div><p class="k">03</p><h4>La performance d’aujourd’hui</h4><p>Isolation compatible avec le bâti ancien, menuiseries performantes, équipements économes. L’étiquette énergétique visée est fixée dès l’étude et vérifiée après travaux.</p></div>
+  </div>
+  <div class="p5-band">
+    <div class="intro">
+      <div><p class="eyebrow">Ce que nous restaurons</p><h3>Des bâtiments de caractère, une même exigence.</h3></div>
+      <p>Chaque typologie appelle ses propres savoir-faire. Toutes offrent des volumes et des matériaux que la construction neuve reproduit rarement.</p>
+    </div>
+    <div class="types">
+      <article><div class="frame photo"><img src="img/immeuble-balcons.jpg" alt=""><span class="no">V</span></div><p class="cap"><span class="pl">Pl. V</span><span>Balcons et consoles</span></p><h4>Immeubles de rapport</h4><p>Façades ordonnancées, balcons filants, hauteurs sous plafond généreuses. Le patrimoine bourgeois du XIX<sup>e</sup> et du début du XX<sup>e</sup>&nbsp;siècle.</p></article>
+      <article><div class="frame photo"><img src="img/escalier-fer-forge.jpg" alt="" style="object-position:50% 60%"><span class="no">VI</span></div><p class="cap"><span class="pl">Pl. VI</span><span>Rampe en fer forgé</span></p><h4>Hôtels particuliers</h4><p>Escaliers d’honneur, cours intérieures, décors peints. Des lieux rares, restaurés pièce par pièce.</p></article>
+      <article><div class="frame photo"><img src="img/maison.jpg" alt=""><span class="no">VII</span></div><p class="cap"><span class="pl">Pl. VII</span><span>Maison bourgeoise</span></p><h4>Maisons de maître</h4><p>Volumes, jardins, matériaux nobles. Des demeures familiales adaptées aux usages d’aujourd’hui.</p></article>
+      <article><div class="frame photo"><img src="img/industriel.jpg" alt=""><span class="no">VIII</span></div><p class="cap"><span class="pl">Pl. VIII</span><span>Verrières industrielles</span></p><h4>Patrimoine industriel</h4><p>Ganteries, ateliers, manufactures. De grands volumes transformés en appartements et lofts de caractère.</p></article>
+    </div>
+  </div>
+  <footer class="folio"><span>URBAIN V · Plaquette de présentation</span><span class="pg">05</span></footer>
+</section>
+
+<!-- 6 — Méthode -->
+<section class="page p6">
+  <div class="p6-head">
+    <p class="eyebrow"><b>04</b>La méthode</p>
+    <h2>Six étapes, de l’étude à la livraison.</h2>
+    <p class="lead">De l’étude à la remise des clés, une seule équipe.</p>
+    <p style="margin-top:3mm">Six étapes structurent chaque opération. Chacune fait l’objet de validations précises pour tenir la qualité, le budget et le calendrier. Le chantier est piloté en contractant général&nbsp;: un seul responsable pour l’ensemble des corps d’état.</p>
+  </div>
+  <div class="frame p6-plate">{{plate:immeuble}}<span class="no">IX</span></div>
+  <p class="cap p6-plate-cap"><span class="pl">Pl. IX</span><span>Relevé d’élévation d’un immeuble de rapport</span></p>
+  <div class="steps">
+    <div class="step"><span class="num">01</span><div><h4>Sélection et acquisition</h4><p>Nous recherchons des immeubles de caractère dans les centres-villes. Avant toute acquisition, nous évaluons leur potentiel&nbsp;: état de la structure, qualité des décors, contraintes d’urbanisme et de protection patrimoniale.</p><p class="liv">Livrable <span>· Étude de faisabilité</span></p></div></div>
+    <div class="step"><span class="num">02</span><div><h4>Diagnostic patrimonial et technique</h4><p>Relevés de façades et de plans, études de structure, diagnostics réglementaires (amiante, plomb, termites) et analyse thermique. Chaque élément remarquable est inventorié.</p><p class="liv">Livrables <span>· Relevés, inventaire patrimonial, diagnostics</span></p></div></div>
+    <div class="step"><span class="num">03</span><div><h4>Conception</h4><p>Avec un architecte du patrimoine et des bureaux d’études, nous dessinons un projet qui respecte l’immeuble&nbsp;: distribution des appartements, choix des matériaux, niveau de prestations et objectif de performance énergétique.</p><p class="liv">Livrables <span>· Avant-projet, cahier des prestations</span></p></div></div>
+    <div class="step"><span class="num">04</span><div><h4>Autorisations</h4><p>Nous déposons les autorisations d’urbanisme et conduisons le dialogue avec la Ville et l’Architecte des Bâtiments de France lorsque l’immeuble se situe en secteur protégé.</p><p class="liv">Livrable <span>· Permis de construire ou déclaration préalable</span></p></div></div>
+    <div class="step"><span class="num">05</span><div><h4>Restauration</h4><p>Le chantier est piloté en contractant général, avec un seul responsable pour l’ensemble des corps d’état. Les lots patrimoniaux sont confiés à des artisans spécialisés et des contrôles qualité jalonnent chaque étape.</p><p class="liv">Livrables <span>· Planning, comptes rendus de chantier</span></p></div></div>
+    <div class="step"><span class="num">06</span><div><h4>Livraison et suivi</h4><p>Visites de chantier, réception, levée des réserves et remise d’un carnet d’entretien. Nous restons présents après la livraison, pendant toute la durée des garanties.</p><p class="liv">Garanties <span>· Parfait achèvement, biennale, décennale</span></p></div></div>
+  </div>
+  <footer class="folio"><span>URBAIN V · Plaquette de présentation</span><span class="pg">06</span></footer>
+</section>
+
+<!-- 7 — Métiers d'art -->
+<section class="page p7">
+  <div class="p7-head">
+    <p class="eyebrow"><b>05</b>Le geste et la matière</p>
+    <h2>La main de l’artisan fait la différence.</h2>
+    <p class="lead">Une restauration réussie se joue dans le détail&nbsp;: un enduit compatible avec la maçonnerie, une moulure reprise au profil exact, une ferronnerie consolidée plutôt que remplacée.</p>
+  </div>
+  <div class="strip">
+    <div><div class="frame photo"><img src="img/atelier-menuiserie.jpg" alt=""><span class="no">X</span></div><p class="cap"><span class="pl">Pl. X</span><span>Atelier de menuiserie</span></p></div>
+    <div><div class="frame photo"><img src="img/enduit-mains.jpg" alt=""><span class="no">XI</span></div><p class="cap"><span class="pl">Pl. XI</span><span>Enduits et finitions</span></p></div>
+    <div><div class="frame photo"><img src="img/moulures.jpg" alt=""><span class="no">XII</span></div><p class="cap"><span class="pl">Pl. XII</span><span>Corniches et moulures</span></p></div>
+  </div>
+  <div class="p7-sub">
+    <div><p class="eyebrow">Métiers d’art</p><h3>Chaque décor confié au bon savoir-faire.</h3></div>
+    <p>Nous travaillons avec des artisans spécialisés, choisis pour chaque lot patrimonial. Leurs gestes font la différence entre une rénovation et une restauration.</p>
+  </div>
+  <div class="crafts">
+    <article class="craft"><div class="frame">{{plate:moulure}}<span class="no">XIII</span></div><h4>Staff et moulures</h4><p>Corniches, rosaces et cimaises sont restaurées à l’identique à partir d’empreintes prises sur place, ou recréées selon les profils d’origine.</p></article>
+    <article class="craft"><div class="frame">{{plate:parquet}}<span class="no">XIV</span></div><h4>Parquets</h4><p>Point de Hongrie, bâtons rompus, panneaux Versailles. Dépose, restauration des lames, ponçage et finition à l’huile ou au vernis.</p></article>
+    <article class="craft"><div class="frame">{{plate:ferronnerie}}<span class="no">XV</span></div><h4>Ferronnerie</h4><p>Garde-corps, balcons et rampes d’escalier sont décapés, consolidés et complétés des éléments manquants, puis protégés durablement.</p></article>
+    <article class="craft"><div class="frame">{{plate:menuiserie}}<span class="no">XVI</span></div><h4>Menuiseries</h4><p>Fenêtres à la française, portes palières, volets intérieurs. Restaurés ou refaits sur mesure, avec des vitrages performants et des profils fidèles.</p></article>
+    <article class="craft"><div class="frame">{{plate:console}}<span class="no">XVII</span></div><h4>Pierre et ciment moulé</h4><p>Encadrements, clés, consoles et bandeaux sont nettoyés, consolidés et ragréés avec des mortiers compatibles, comme le ciment naturel prompt.</p></article>
+    <article class="craft"><div class="frame">{{plate:lambris}}<span class="no">XVIII</span></div><h4>Décors et finitions</h4><p>Lambris, peintures à la chaux, patines et dorure. Les finitions sont choisies pour respecter l’esprit de chaque pièce.</p></article>
+  </div>
+  <footer class="folio"><span>URBAIN V · Plaquette de présentation</span><span class="pg">07</span></footer>
+</section>
+
+<!-- 8 — Performance énergétique et garanties -->
+<section class="page p8">
+  <div class="p8-head">
+    <p class="eyebrow"><b>06</b>Performance énergétique</p>
+    <h2>Rénover sans dénaturer.</h2>
+    <p class="lead">Un immeuble ancien n’est pas un bâtiment neuf. Ses murs respirent et ses façades sont souvent protégées.</p>
+    <p class="t">Nous retenons des solutions compatibles avec le bâti, choisies au cas par cas après une analyse thermique. L’étiquette énergétique visée est fixée dès la conception. Un diagnostic de performance énergétique réalisé après travaux en atteste.</p>
+  </div>
+  <ul class="perf">
+    <li><h4>Isolation</h4><p>Isolation par l’intérieur en matériaux perspirants, comme la fibre de bois ou les enduits chaux-chanvre, là où les décors le permettent.</p></li>
+    <li><h4>Menuiseries</h4><p>Fenêtres restaurées ou refaites sur mesure, avec double vitrage et profils fidèles à l’origine.</p></li>
+    <li><h4>Équipements</h4><p>Ventilation adaptée au bâti ancien, production de chaleur performante et régulation pièce par pièce.</p></li>
+  </ul>
+  <div class="quote"><p>«&nbsp;Nous conservons ce qui fait le caractère du lieu, puis nous y installons le confort de notre époque.&nbsp;»</p><p class="by">Notre règle</p></div>
+  <div class="frame photo p8-photo"><img src="img/chantier.jpg" alt=""><span class="no">XIX</span></div>
+  <p class="cap p8-photo-cap"><span class="pl">Pl. XIX</span><span>Restauration en cours&nbsp;: maçonneries mises à nu</span></p>
+  <div class="dpe-card">
+    <p class="t">Loi Climat et résilience</p>
+    <p class="l">Le calendrier d’interdiction de mise en location des logements énergivores.</p>
+    <div class="dpe">
+      <div class="dpe-row"><span class="dpe-bar" style="--w:34%;--c:var(--dpe-a)">A</span><span class="dpe-note"></span></div>
+      <div class="dpe-row"><span class="dpe-bar" style="--w:44%;--c:var(--dpe-b);--t:var(--dpe-ink)">B</span><span class="dpe-note"></span></div>
+      <div class="dpe-row"><span class="dpe-bar" style="--w:54%;--c:var(--dpe-c);--t:var(--dpe-ink)">C</span><span class="dpe-note"></span></div>
+      <div class="dpe-row"><span class="dpe-bar" style="--w:64%;--c:var(--dpe-d);--t:var(--dpe-ink)">D</span><span class="dpe-note"></span></div>
+      <div class="dpe-row"><span class="dpe-bar" style="--w:74%;--c:var(--dpe-e);--t:var(--dpe-ink)">E</span><span class="dpe-note"><b>2034</b>Interdiction</span></div>
+      <div class="dpe-row"><span class="dpe-bar" style="--w:86%;--c:var(--dpe-f)">F</span><span class="dpe-note"><b>2028</b>Interdiction</span></div>
+      <div class="dpe-row"><span class="dpe-bar" style="--w:98%;--c:var(--dpe-g)">G</span><span class="dpe-note"><b>Depuis 2025</b>Interdit</span></div>
+    </div>
+    <p class="f">Depuis le 1<sup>er</sup>&nbsp;janvier 2025, un logement classé G ne peut plus être proposé à la location. Les logements classés F suivront le 1<sup>er</sup>&nbsp;janvier 2028, puis E le 1<sup>er</sup>&nbsp;janvier 2034.</p>
+  </div>
+  <div class="guar night">
+    <p class="eyebrow">Garanties</p>
+    <h3>Des travaux couverts par les garanties légales.</h3>
+    <div class="guar-grid">
+      <div><p class="y">1 an</p><p>Garantie de parfait achèvement</p></div>
+      <div><p class="y">2 ans</p><p>Garantie de bon fonctionnement des équipements</p></div>
+      <div><p class="y">10 ans</p><p>Garantie décennale sur les ouvrages</p></div>
+    </div>
+  </div>
+  <footer class="folio light"><span>URBAIN V · Plaquette de présentation</span><span class="pg">08</span></footer>
+</section>
+
+<!-- 9 — Territoire -->
+<section class="page p9">
+  <div class="p9-head">
+    <p class="eyebrow"><b>07</b>Notre territoire</p>
+    <h2>Du Dauphiné au Sud-Est, un patrimoine à révéler.</h2>
+  </div>
+  <div class="p9-map">{{map}}</div>
+  <p class="cap p9-map-cap"><span class="pl">Carte</span><span>Le Dauphiné, notre territoire d’origine, et le grand quart sud-est de la France, notre périmètre d’intervention (représentation indicative)</span></p>
+  <div class="p9-text">
+    <p>De l’Isère aux Hautes-Alpes en passant par la Drôme, le Dauphiné conserve un patrimoine bâti d’une grande richesse, souvent méconnu&nbsp;: hôtels particuliers, immeubles bourgeois aux décors de ciment moulé, anciennes manufactures. C’est notre territoire d’origine.</p>
+    <p>Nous intervenons plus largement dans tout le grand quart sud-est de la France, partout où un immeuble de caractère mérite d’être restauré et transmis.</p>
+  </div>
+  <div class="facts">
+    <div><h4>Dauphiné</h4><p>Isère, Drôme et Hautes-Alpes&nbsp;: notre territoire d’origine.</p></div>
+    <div><h4>Grand quart sud-est</h4><p>Notre périmètre d’intervention, pour des immeubles entiers comme pour des demeures.</p></div>
+    <div><h4>Ciment moulé</h4><p>Les décors de façade de la fin du XIX<sup>e</sup>&nbsp;siècle, signature du patrimoine dauphinois.</p></div>
+  </div>
+  <footer class="folio"><span>URBAIN V · Plaquette de présentation</span><span class="pg">09</span></footer>
+</section>
+
+<!-- 10 — Investir -->
+<section class="page p10">
+  <div class="frame photo bare p10-photo"><img src="img/haussmann-arbres.jpg" alt="" style="object-position:50% 45%"><span class="no">XX</span></div>
+  <p class="cap p10-cap"><span class="pl">Pl. XX</span><span>Immeubles en pierre de taille, fin du XIX<sup>e</sup>&nbsp;siècle</span></p>
+  <div class="p10-head">
+    <p class="eyebrow"><b>08</b>Investir dans l’ancien</p>
+    <h2>L’ancien de prestige, une valeur patrimoniale durable.</h2>
+    <p class="lead">Un appartement restauré dans un immeuble de caractère conjugue emplacement, rareté et qualité. Selon le bien et votre situation, il peut aussi s’inscrire dans une stratégie fiscale.</p>
+  </div>
+  <div class="reasons">
+    <div><h4>L’emplacement</h4><p>Les immeubles anciens occupent le cœur des villes, à proximité des commerces, des services et des transports. Une offre par nature limitée.</p></div>
+    <div><h4>La qualité</h4><p>Volumes, matériaux, décors. Des qualités que la construction neuve reproduit rarement, associées au confort d’une rénovation complète.</p></div>
+    <div><h4>La pérennité</h4><p>Un immeuble restauré et performant répond aux exigences de la loi Climat et résilience, qui encadre la location des logements énergivores.</p></div>
+  </div>
+  <div class="p10-cols">
+    <div>
+      <p class="eyebrow plain">Habiter</p>
+      <h3>Acquérir pour y vivre.</h3>
+      <p>Un appartement aux volumes et aux décors d’origine, avec le confort d’une rénovation complète et les garanties légales sur les travaux.</p>
+      <p>Selon les opérations, la vente peut être réalisée en vente d’immeuble à rénover (VIR)&nbsp;: le paiement suit l’avancement des travaux, dont l’achèvement est garanti.</p>
+      <div class="acc-block">
+        <p class="eyebrow plain">Accompagnement</p>
+        <p style="margin-top:2mm">Nous travaillons avec votre conseiller en gestion de patrimoine, votre notaire ou votre expert-comptable pour vérifier l’adéquation de chaque opération à vos objectifs.</p>
+      </div>
+    </div>
+    <div>
+      <p class="eyebrow plain">Investir</p>
+      <h3>Les dispositifs applicables à l’ancien.</h3>
+      <ul class="disp">
+        <li><b>Malraux</b><span>Réduction d’impôt de 22&nbsp;% ou 30&nbsp;% des travaux de restauration, en site patrimonial remarquable.</span></li>
+        <li><b>Monuments historiques</b><span>Travaux de restauration déductibles du revenu global, sans plafond, lorsque l’immeuble est loué.</span></li>
+        <li><b>Déficit foncier</b><span>Imputation sur le revenu global jusqu’à 10&nbsp;700&nbsp;€ par an, 21&nbsp;400&nbsp;€ pour la rénovation énergétique.</span></li>
+        <li><b>Denormandie</b><span>Réduction d’impôt de 12 à 21&nbsp;% du prix de revient, dans les communes éligibles.</span></li>
+        <li><b>Dispositif Jeanbrun</b><span>Amortissement déductible des revenus fonciers, de 3 à 4&nbsp;% par an dans l’ancien rénové.</span></li>
+      </ul>
+      <p class="callout"><b>Guide de la fiscalité 2026.</b> Le détail de chaque dispositif, ses conditions et des exemples chiffrés figurent dans notre guide, disponible sur demande.</p>
+    </div>
+  </div>
+  <p class="disclaimer">Informations générales à jour au 1<sup>er</sup>&nbsp;novembre 2026, sous réserve de l’évolution des textes et de leur interprétation par l’administration fiscale. Elles ne constituent ni un conseil fiscal ni un conseil en investissement. Le bénéfice d’un avantage fiscal dépend de votre situation personnelle et du respect de conditions légales strictes. Tout investissement immobilier comporte des risques, notamment de vacance locative, de liquidité et d’évolution des prix.</p>
+  <footer class="folio"><span>URBAIN V · Plaquette de présentation</span><span class="pg">10</span></footer>
+</section>
+
+<!-- 11 — Opérations -->
+<section class="page p11">
+  <div class="p11-head">
+    <p class="eyebrow"><b>09</b>Opérations</p>
+    <h2>Nos premières adresses se préparent.</h2>
+    <p class="lead">URBAIN V prépare ses premières opérations de restauration. Inscrivez-vous pour en recevoir la présentation en avant-première, avant leur commercialisation.</p>
+  </div>
+  <div class="frame photo bare p11-photo"><img src="img/balcons-ferronnerie.jpg" alt="" style="object-position:38% 50%"><span class="no">XXI</span></div>
+  <p class="cap p11-photo-cap"><span class="pl">Pl. XXI</span><span>Balcons en ferronnerie et consoles sculptées</span></p>
+  <div class="ap">
+    <p class="eyebrow plain">Avant-première</p>
+    <h3>Soyez informé avant tout le monde.</h3>
+    <p>Pour chaque nouvelle opération, vous recevrez un dossier de présentation complet&nbsp;:</p>
+    <ul class="dot-list">
+      <li>L’histoire de l’immeuble et le projet de restauration</li>
+      <li>Les plans des appartements et la grille de prix</li>
+      <li>Le niveau de prestations et la performance énergétique visée</li>
+      <li>Le calendrier et, le cas échéant, le régime fiscal applicable</li>
+    </ul>
+  </div>
+  <div class="frame p11-plan">{{plate:plan}}<span class="no">XXII</span></div>
+  <p class="cap p11-plan-cap"><span class="pl">Pl. XXII</span><span>Plan type d’un appartement en enfilade</span></p>
+  <div class="crit-head">
+    <p class="eyebrow plain">Nos critères</p>
+    <h3>Ce qui fait une adresse URBAIN V.</h3>
+  </div>
+  <div class="crit">
+    <div><h4>Un emplacement central</h4><p>Des immeubles au cœur des villes, proches des commerces, des services et des transports.</p></div>
+    <div><h4>Un caractère affirmé</h4><p>Une architecture, des décors et des volumes qui méritent d’être restaurés.</p></div>
+    <div><h4>Un potentiel réel</h4><p>Une structure saine ou réparable et une distribution adaptable aux usages actuels.</p></div>
+    <div><h4>Une performance atteignable</h4><p>Une amélioration énergétique compatible avec le bâti et ses protections.</p></div>
+  </div>
+  <div class="duo">
+    <div class="night"><p class="eyebrow plain">Propriétaires</p><h4>Vous possédez un immeuble de caractère&nbsp;?</h4><p>Immeuble entier, hôtel particulier, maison de maître ou bâtiment d’activité. Nous étudions chaque proposition avec discrétion et vous répondons personnellement.</p><p class="go">Proposer un bien · urbain-v.fr/contact</p></div>
+    <div><p class="eyebrow plain">Collectivités</p><h4>Un centre ancien à revitaliser&nbsp;?</h4><p>Immeubles vacants, îlots à requalifier, bâtiments publics à reconvertir. Nous accompagnons les communes dans leurs projets de reconquête des centres anciens.</p><p class="go">Échanger avec nous · urbain-v.fr/contact</p></div>
+  </div>
+  <footer class="folio"><span>URBAIN V · Plaquette de présentation</span><span class="pg">11</span></footer>
+</section>
+
+<!-- 12 — Quatrième de couverture -->
+<section class="page back night">
+  <img class="back-star" src="logo/embleme.svg" alt="">
+  <img class="back-logo" src="logo/urbain-v-blanc-vert.svg" alt="URBAIN V">
+  <p class="back-base">Restaurer · Sublimer · Transmettre</p>
+  <div class="back-main">
+    <p class="eyebrow">Nous contacter</p>
+    <h3>Parlons de votre projet.</h3>
+    <p class="back-lines">163, cours de la Libération · 38100 Grenoble<br>
+      <a href="tel:+33683480615">06&nbsp;83&nbsp;48&nbsp;06&nbsp;15</a> · <a href="mailto:contact@urbain-v.fr">contact@urbain-v.fr</a><br>
+      <a href="https://urbain-v.fr/">urbain-v.fr</a><br>
+      <span class="s">Sur rendez-vous</span></p>
+  </div>
+  <div class="back-cta">
+    <a href="https://urbain-v.fr/operations/#avant-premiere"><b>Recevoir les avant-premières</b><span>urbain-v.fr/operations</span></a>
+    <a href="https://urbain-v.fr/contact/?objet=investir"><b>Demander une étude</b><span>urbain-v.fr/contact</span></a>
+    <a href="https://urbain-v.fr/contact/?objet=ceder"><b>Proposer un immeuble</b><span>urbain-v.fr/contact</span></a>
+  </div>
+  <p class="back-legal">URBAIN V est une marque commerciale de GROUPE NOVELIA, SARL au capital de 2&nbsp;700&nbsp;000&nbsp;€, RCS Grenoble 948&nbsp;146&nbsp;691, siège social&nbsp;: 53, chemin du Boutey, 38560 Champ-sur-Drac. Marque déposée à l’INPI (n°&nbsp;24&nbsp;5031295).<br>
+    Document non contractuel, édition de novembre 2026. Photographies d’illustration publiées sur Unsplash (licence Unsplash), crédits sur urbain-v.fr/mentions-legales&nbsp;; elles ne représentent pas des réalisations d’URBAIN V. Dessins et planches&nbsp;: URBAIN V.</p>
+</section>
+
+</body>
+</html>

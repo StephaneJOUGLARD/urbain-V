@@ -24,6 +24,7 @@ Site vitrine d'URBAIN V, rénovation immobilière de prestige à Grenoble : <htt
 | Page introuvable | — | `404.html` |
 
 Ressources communes : `assets/css/site.css`, `assets/js/site.js`, photos dans `assets/img/`, logo dans `assets/img/logo/`.
+Documents à télécharger : `documents/` (plaquette de présentation, guide de la fiscalité 2026), avec leurs sources dans `tools/documents/`.
 Référencement : `sitemap.xml`, `robots.txt`, titres et descriptions propres à chaque page.
 
 ## À compléter avant la mise en ligne

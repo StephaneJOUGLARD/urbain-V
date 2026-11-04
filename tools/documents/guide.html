@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>URBAIN V — Guide de la fiscalité du patrimoine ancien, édition 2026</title>
+<meta name="author" content="URBAIN V">
+<meta name="description" content="Malraux, Monuments historiques, déficit foncier, Denormandie, dispositif Jeanbrun : les règles en vigueur en 2026.">
+<link rel="stylesheet" href="node_modules/@fontsource/eb-garamond/400.css">
+<link rel="stylesheet" href="node_modules/@fontsource/eb-garamond/400-italic.css">
+<link rel="stylesheet" href="node_modules/@fontsource/eb-garamond/500.css">
+<link rel="stylesheet" href="node_modules/@fontsource/roboto-slab/400.css">
+<link rel="stylesheet" href="node_modules/@fontsource/jost/300.css">
+<link rel="stylesheet" href="node_modules/@fontsource/jost/400.css">
+<link rel="stylesheet" href="node_modules/@fontsource/jost/500.css">
+<link rel="stylesheet" href="node_modules/@fontsource/jost/600.css">
+<link rel="stylesheet" href="print.css">
+<style>
+.page { background: #fff; }
+.page.night { background: var(--night); }
+sup { font-size: .68em; line-height: 0; }
+
+/* Couverture */
+.g-cover { background: linear-gradient(180deg, var(--accent) 0, var(--accent) 176mm, var(--night) 258mm, var(--night) 100%); }
+/* le dégradé (haut intact, puis vert approfondi) est intégré à la photo */
+.gc-photo { position: absolute; left: 0; right: 0; top: 0; height: 176mm; }
+.gc-photo img { width: 100%; height: 100%; }
+.gc-body { position: absolute; left: var(--mx); right: var(--mx); top: 146mm; }
+.gc-kicker { font-family: var(--f-inscr); font-size: 7pt; letter-spacing: .28em; text-transform: uppercase; color: var(--accent-soft); }
+.g-cover h1 { color: #fff; font-size: 44pt; line-height: 1.02; margin-top: 5mm; }
+.gc-list { margin-top: 9mm; padding-top: 5mm; border-top: .6pt solid rgba(255,255,255,.3); }
+.gc-list p { display: flex; margin: 0 0 1.6mm; }
+.gc-list span { font-family: var(--f-inscr); font-size: 7.2pt; letter-spacing: .2em; text-transform: uppercase; color: #fff; }
+.gc-list span + span::before { content: "·"; margin: 0 2.6mm; color: var(--accent-soft); }
+.gc-foot { position: absolute; left: var(--mx); right: var(--mx); bottom: 15mm; display: flex; justify-content: space-between; align-items: flex-end; }
+.gc-logo { width: 50mm; height: auto; }
+.gc-note { text-align: right; font-size: 8pt; color: var(--on-night-2); line-height: 1.6; }
+.gc-note b { font-weight: 400; color: #fff; }
+.gc-credit { position: absolute; right: var(--mx); top: 139mm; font-family: var(--f-inscr); font-size: 5.2pt; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.55); }
+
+/* Avant-propos */
+.g2-main { position: absolute; left: var(--mx); top: 24mm; width: 110mm; }
+.g2-main h2 { font-size: 25pt; }
+.g2-text { margin-top: 6mm; font-size: 9.6pt; line-height: 1.64; }
+.g2-text p + p { margin-top: 3mm; }
+.refs { position: absolute; left: var(--mx); width: 110mm; top: 158mm; background: var(--paper); padding: 5mm 6mm 5.5mm; }
+.refs li { font-size: 8pt; line-height: 1.4; padding: 1.5mm 0 1.5mm 4.5mm; position: relative; }
+.refs li::before { content: ""; position: absolute; left: 0; top: 3.1mm; width: 1.5mm; height: 1.5mm; background: var(--brand); transform: rotate(45deg); }
+.g2-side { position: absolute; right: 0; top: 0; bottom: 0; width: 64mm; padding: 26mm 10mm 0; }
+.toc { margin-top: 5mm; }
+.toc li { display: grid; grid-template-columns: 8.5mm 1fr 5mm; column-gap: 1.5mm; align-items: baseline; padding: 2.6mm 0; border-bottom: .5pt solid var(--night-line); }
+.toc li:first-child { border-top: .5pt solid var(--night-line); }
+.toc .n { font-family: var(--f-inscr); font-size: 6.2pt; letter-spacing: .12em; color: var(--accent-night); }
+.toc .t { font-family: var(--f-title); font-size: 12.4pt; color: var(--on-night); line-height: 1.15; }
+.toc .p { font-family: var(--f-inscr); font-size: 6.2pt; color: var(--on-night-2); text-align: right; }
+.g2-side .side-note { margin-top: 10mm; font-size: 7.6pt; line-height: 1.5; color: var(--on-night-2); }
+.g2 .folio { right: calc(64mm + var(--mx)); }
+
+/* En-têtes de page intérieure */
+.head { position: absolute; left: var(--mx); right: var(--mx); top: 22mm; }
+.head h2 { max-width: 160mm; }
+.head .lead { max-width: 168mm; font-size: 10pt; }
+
+/* Nouveautés */
+.chg { position: absolute; left: var(--mx); right: var(--mx); top: 68mm; display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+.chg article { background: var(--paper); padding: 4.4mm 5mm 4.8mm; border-top: 1.4pt solid var(--brand); }
+.tag { display: inline-block; font-family: var(--f-inscr); font-size: 5.6pt; letter-spacing: .18em; text-transform: uppercase; color: #fff; background: var(--accent); padding: .8mm 1.9mm .7mm; line-height: 1.3; }
+.tag.grey { background: var(--ink-3); }
+.tag.ink { background: var(--ink); }
+.chg h4 { margin: 2.4mm 0 1.4mm; font-size: 13pt; }
+.chg p { font-size: 8.5pt; line-height: 1.48; }
+
+/* Panorama */
+.pano { position: absolute; left: var(--mx); right: var(--mx); top: 66mm; width: calc(210mm - 2 * var(--mx)); border-collapse: collapse; table-layout: fixed; font-size: 7.5pt; line-height: 1.38; }
+.pano .c0 { width: 25mm; }
+.pano thead th { background: var(--night); color: #fff; font-family: var(--f-title); font-weight: 500; font-size: 10.4pt; text-align: left; padding: 2.8mm 2.2mm 2.6mm; vertical-align: bottom; line-height: 1.08; border-left: .6pt solid #fff; }
+.pano thead th:first-child { background: transparent; border-left: 0; }
+.pano tbody th { text-align: left; font-family: var(--f-inscr); font-weight: 400; font-size: 5.5pt; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); padding: 2.3mm 2mm 2.3mm 0; vertical-align: top; border-top: .6pt solid var(--line); line-height: 1.45; }
+.pano td { padding: 2.3mm 2.2mm; vertical-align: top; border-top: .6pt solid var(--line); color: var(--ink-2); }
+.pano tbody tr:nth-child(odd) td { background: var(--paper); }
+.pano tbody tr:last-child th, .pano tbody tr:last-child td { border-bottom: .6pt solid var(--line); }
+.pano .y { color: var(--accent); font-weight: 600; }
+.pano .n { color: var(--ink-3); }
+.reading { position: absolute; left: var(--mx); right: var(--mx); top: 222mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: 7mm; }
+.reading > div { border-top: 1.2pt solid var(--brand); padding-top: 3mm; }
+.reading h4 { font-size: 12pt; }
+.reading p { font-size: 8.4pt; margin-top: 1.4mm; line-height: 1.48; }
+
+/* Fiches */
+.f-photo { position: absolute; left: 0; right: 0; top: 0; height: 52mm; }
+.f-cap { position: absolute; left: var(--mx); right: var(--mx); top: 54.5mm; }
+.f-head { position: absolute; left: var(--mx); right: var(--mx); top: 64mm; }
+.f-head.top { top: 22mm; }
+.f-head h2 { font-size: 24pt; max-width: 170mm; }
+.f-head .lead { font-size: 10pt; max-width: 170mm; margin-top: 3mm; }
+.kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; margin-top: 5mm; }
+.kpi { background: var(--paper); border-top: 1.4pt solid var(--brand); padding: 3mm 4mm 3.2mm; }
+.kpi b { display: block; font-family: var(--f-title); font-weight: 500; font-size: 18.5pt; color: var(--ink); line-height: 1.05; }
+.kpi span { display: block; font-size: 7.6pt; color: var(--ink-2); margin-top: 1.1mm; line-height: 1.35; }
+.fiche { width: 100%; border-collapse: collapse; margin-top: 5.5mm; font-size: 8.5pt; line-height: 1.48; }
+.fiche th { width: 33mm; text-align: left; vertical-align: top; font-family: var(--f-inscr); font-weight: 400; font-size: 5.8pt; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); padding: 2.6mm 4mm 2.6mm 0; border-top: .6pt solid var(--line); line-height: 1.5; }
+.fiche td { padding: 2.4mm 0 2.6mm; border-top: .6pt solid var(--line); color: var(--ink-2); vertical-align: top; }
+.fiche tr:last-child th, .fiche tr:last-child td { border-bottom: .6pt solid var(--line); }
+.fiche td b { color: var(--ink); font-weight: 500; }
+.fiche td p + p { margin-top: 1.3mm; }
+.f-note { margin-top: 4mm; background: var(--accent-soft); padding: 2.8mm 4mm 3mm; font-size: 8.2pt; color: var(--ink); line-height: 1.45; }
+.f-note b { font-weight: 500; }
+.f-ref { margin-top: 2.6mm; font-family: var(--f-inscr); font-size: 5.6pt; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); }
+.cmp { width: 100%; border-collapse: collapse; margin-top: 3mm; font-size: 8.3pt; line-height: 1.4; table-layout: fixed; }
+.cmp th, .cmp td { padding: 2.2mm 2.4mm; text-align: left; vertical-align: top; border-top: .6pt solid var(--line); }
+.cmp thead th { background: var(--night); color: #fff; font-family: var(--f-title); font-weight: 500; font-size: 10.4pt; border-top: 0; }
+.cmp thead th:first-child { background: transparent; }
+.cmp tbody th { font-family: var(--f-inscr); font-weight: 400; font-size: 5.7pt; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); padding-left: 0; width: 40mm; }
+.cmp tbody tr:nth-child(odd) td { background: var(--paper); }
+.cmp tbody tr:last-child th, .cmp tbody tr:last-child td { border-bottom: .6pt solid var(--line); }
+.sub-h { margin-top: 6mm; }
+.sub-h h3 { font-size: 15pt; margin-top: 1.6mm; }
+
+/* Cas pratiques */
+.cases { position: absolute; left: var(--mx); right: var(--mx); top: 62mm; display: grid; gap: 6mm; }
+.case { background: var(--paper); padding: 5.5mm 6mm 6mm; display: grid; grid-template-columns: 58mm 1fr; gap: 7mm; }
+.case h3 { font-size: 15pt; margin-top: 1.6mm; }
+.case .hyp { margin-top: 3.4mm; font-size: 7.9pt; line-height: 1.45; }
+.case .hyp li { padding: 1.4mm 0; border-top: .5pt solid var(--line); }
+.case .hyp li:last-child { border-bottom: .5pt solid var(--line); }
+.case .hyp b { font-weight: 500; color: var(--ink); }
+.calc { width: 100%; border-collapse: collapse; font-size: 8pt; line-height: 1.4; }
+.calc th, .calc td { padding: 2mm 2mm; text-align: left; border-top: .5pt solid var(--line); vertical-align: top; }
+.calc thead th { font-family: var(--f-inscr); font-weight: 400; font-size: 5.6pt; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); border-top: 0; padding-bottom: 1.6mm; }
+.calc td.r, .calc th.r { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.calc tfoot td { border-top: 1pt solid var(--ink); font-weight: 600; color: var(--ink); }
+.res { margin-top: 3.4mm; background: var(--night); color: var(--on-night); padding: 3mm 4mm; font-size: 8.2pt; line-height: 1.45; }
+.res b { font-family: var(--f-title); font-weight: 500; font-size: 13pt; color: #fff; }
+.case-foot { position: absolute; left: var(--mx); right: var(--mx); bottom: 18mm; font-size: 7pt; line-height: 1.45; color: var(--ink-3); }
+
+/* Repères */
+.marks { position: absolute; left: var(--mx); right: var(--mx); top: 56mm; display: grid; grid-template-columns: 1fr 1fr; gap: 0 9mm; }
+.mark { border-top: 1.2pt solid var(--brand); padding: 3mm 0 4.6mm; }
+.mark h4 { font-size: 12.4pt; }
+.mark p { font-size: 8.4pt; line-height: 1.5; margin-top: 1.4mm; }
+.mark table { width: 100%; border-collapse: collapse; margin-top: 2.4mm; font-size: 7.6pt; line-height: 1.35; }
+.mark th, .mark td { padding: 1.4mm 1.8mm; text-align: left; border-top: .5pt solid var(--line); }
+.mark thead th { font-family: var(--f-inscr); font-weight: 400; font-size: 5.5pt; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); border-top: 0; }
+.mark tbody tr:nth-child(odd) td { background: var(--paper); }
+.mark tbody tr:last-child td { border-bottom: .5pt solid var(--line); }
+.mark .dpe-row { grid-template-columns: minmax(0, 1fr) 25mm; }
+.mark .dpe-bar { height: 4.6mm; }
+
+/* Quatrième */
+.back-star { position: absolute; right: -44mm; bottom: -40mm; width: 200mm; height: 200mm; opacity: .07; }
+.gb-main { position: absolute; left: var(--mx); top: 26mm; width: 120mm; }
+.gb-main h2 { font-size: 27pt; }
+.gb-main p.t { margin-top: 4mm; font-size: 9.4pt; color: var(--on-night); line-height: 1.6; }
+.gb-contact { position: absolute; left: var(--mx); top: 100mm; width: 176mm; display: grid; grid-template-columns: 1fr 1fr; gap: 9mm; }
+.gb-contact .l { font-size: 10pt; line-height: 1.8; color: var(--on-night); margin-top: 2mm; }
+.gb-cta a { display: block; border: .6pt solid var(--night-line); padding: 3.6mm 4.4mm; margin-top: 2.6mm; }
+.gb-cta b { display: block; font-family: var(--f-title); font-weight: 500; font-size: 12.4pt; color: #fff; }
+.gb-cta span { display: block; margin-top: 1mm; font-family: var(--f-inscr); font-size: 5.8pt; letter-spacing: .12em; color: var(--accent-night); }
+.warn { position: absolute; left: var(--mx); right: var(--mx); top: 160mm; border-top: .6pt solid var(--night-line); padding-top: 5mm; display: grid; grid-template-columns: 1fr 1fr; gap: 9mm; }
+.warn p { font-size: 7.6pt; line-height: 1.55; color: var(--on-night-2); }
+.warn p b { color: #fff; font-weight: 500; }
+.gb-logo { position: absolute; left: var(--mx); bottom: 26mm; width: 50mm; }
+.gb-base { position: absolute; left: var(--mx); bottom: 18mm; font-family: var(--f-inscr); font-size: 6.4pt; letter-spacing: .3em; text-transform: uppercase; color: #fff; }
+.gb-legal { position: absolute; right: var(--mx); bottom: 18mm; width: 92mm; text-align: right; font-size: 5.8pt; line-height: 1.55; color: var(--on-night-2); }
+</style>
+</head>
+<body>
+
+<!-- 1 — Couverture -->
+<section class="page g-cover">
+  <div class="gc-photo"><img src="img/facade-blanche-cover.jpg" alt=""></div>
+  <p class="gc-credit">Photographie d’illustration</p>
+  <div class="gc-body">
+    <p class="gc-kicker">Édition 2026 · À jour de la loi de finances pour 2026</p>
+    <h1>Guide de la fiscalité<br>du patrimoine ancien</h1>
+    <div class="gc-list"><p><span>Malraux</span><span>Monuments historiques</span><span>Déficit foncier</span></p><p><span>Denormandie</span><span>Dispositif Jeanbrun</span></p></div>
+  </div>
+  <div class="gc-foot">
+    <img class="gc-logo" src="logo/urbain-v-blanc-vert.svg" alt="URBAIN V">
+    <p class="gc-note"><b>Restaurer · Sublimer · Transmettre</b><br>urbain-v.fr</p>
+  </div>
+</section>
+
+<!-- 2 — Avant-propos et sommaire -->
+<section class="page g2">
+  <div class="g2-main">
+    <p class="eyebrow">Avant-propos</p>
+    <h2>Investir dans l’ancien, en connaissance de cause.</h2>
+    <div class="g2-text">
+      <p>Restaurer un immeuble de caractère, c’est préserver un patrimoine et créer des logements de qualité au cœur des villes. Le législateur encourage cet effort par plusieurs régimes fiscaux, chacun réservé à un type d’immeuble et assorti de conditions précises.</p>
+      <p>Ce guide présente les principaux dispositifs applicables à l’ancien en 2026&nbsp;: leur mécanisme, leurs plafonds, les engagements qu’ils impliquent et les points d’attention. Il tient compte de la loi de finances et de la loi de financement de la sécurité sociale pour 2026.</p>
+      <p>Le choix d’un dispositif ne se décide pas isolément&nbsp;: il dépend de l’immeuble, de votre fiscalité et de vos objectifs patrimoniaux. Chaque opération URBAIN V précise le régime qui la concerne, et nous travaillons avec votre conseiller en gestion de patrimoine, votre notaire ou votre expert-comptable pour en vérifier l’adéquation à votre situation.</p>
+    </div>
+  </div>
+  <div class="refs">
+    <p class="eyebrow plain">Textes de référence</p>
+    <ul style="margin-top:2.6mm">
+      <li>Loi n°&nbsp;2026-103 du 19&nbsp;février 2026 de finances pour 2026</li>
+      <li>Loi n°&nbsp;2025-1403 du 30&nbsp;décembre 2025 de financement de la sécurité sociale pour 2026</li>
+      <li>Code général des impôts, notamment art.&nbsp;31, 156, 156&nbsp;bis, 199&nbsp;tervicies, 199&nbsp;novovicies et 200-0&nbsp;A</li>
+      <li>Code de la construction et de l’habitation, art.&nbsp;L.&nbsp;262-1 et suivants (vente d’immeuble à rénover)</li>
+      <li>Bulletin officiel des finances publiques (BOFiP-Impôts)</li>
+    </ul>
+  </div>
+  <aside class="g2-side night">
+    <p class="eyebrow">Sommaire</p>
+    <ol class="toc">
+      <li><span class="n">01</span><span class="t">Ce qui change en 2026</span><span class="p">3</span></li>
+      <li><span class="n">02</span><span class="t">Panorama des dispositifs</span><span class="p">4</span></li>
+      <li><span class="n">03</span><span class="t">Malraux</span><span class="p">5</span></li>
+      <li><span class="n">04</span><span class="t">Monuments historiques</span><span class="p">6</span></li>
+      <li><span class="n">05</span><span class="t">Déficit foncier</span><span class="p">7</span></li>
+      <li><span class="n">06</span><span class="t">Denormandie</span><span class="p">8</span></li>
+      <li><span class="n">07</span><span class="t">Dispositif Jeanbrun</span><span class="p">9</span></li>
+      <li><span class="n">08</span><span class="t">Cas pratiques</span><span class="p">10</span></li>
+      <li><span class="n">09</span><span class="t">Repères fiscaux 2026</span><span class="p">11</span></li>
+      <li><span class="n">—</span><span class="t">Investir avec URBAIN V</span><span class="p">12</span></li>
+    </ol>
+    <p class="side-note">Informations à jour au 1<sup>er</sup>&nbsp;novembre 2026. Elles sont générales et ne constituent pas un conseil fiscal&nbsp;: voir l’avertissement en dernière page.</p>
+  </aside>
+  <footer class="folio"><span>URBAIN V · Guide de la fiscalité 2026</span><span class="pg">02</span></footer>
+</section>
+
+<!-- 3 — Ce qui change en 2026 -->
+<section class="page">
+  <div class="head">
+    <p class="eyebrow"><b>01</b>Ce qui change en 2026</p>
+    <h2>Les nouveautés de l’année.</h2>
+    <p class="lead">La loi de finances pour 2026 crée un nouveau dispositif d’investissement locatif et proroge plusieurs régimes&nbsp;; la loi de financement de la sécurité sociale modifie les prélèvements sociaux sur certains revenus du capital.</p>
+  </div>
+  <div class="chg">
+    <article><span class="tag">Nouveau</span><h4>Dispositif Jeanbrun («&nbsp;Relance Logement&nbsp;»)</h4><p>Statut fiscal du bailleur privé&nbsp;: un amortissement déductible des revenus fonciers pour les logements en immeuble collectif, neufs ou anciens rénovés, acquis du 21&nbsp;février 2026 au 31&nbsp;décembre 2028.</p></article>
+    <article><span class="tag">Prorogé</span><h4>Déficit foncier majoré</h4><p>Le plafond de 21&nbsp;400&nbsp;€ imputable sur le revenu global pour les travaux de rénovation énergétique est prolongé pour les dépenses payées jusqu’au 31&nbsp;décembre 2027.</p></article>
+    <article><span class="tag">Prorogé</span><h4>Denormandie et Loc’Avantages</h4><p>Les deux réductions d’impôt sont prorogées jusqu’au 31&nbsp;décembre 2027.</p></article>
+    <article><span class="tag ink">Fermé</span><h4>Pinel</h4><p>Le dispositif n’a pas été prorogé&nbsp;: il est fermé aux nouveaux investissements depuis le 1<sup>er</sup>&nbsp;janvier 2025. Les engagements en cours se poursuivent.</p></article>
+    <article><span class="tag grey">Inchangé</span><h4>Malraux et Monuments historiques</h4><p>Pas de modification de ces régimes par la loi de finances pour 2026. Rappel&nbsp;: le taux de 30&nbsp;% du Malraux dans les quartiers anciens dégradés et les quartiers du NPNRU a pris fin le 31&nbsp;décembre 2024.</p></article>
+    <article><span class="tag">LFSS 2026</span><h4>Prélèvements sociaux</h4><p>Taux porté à 18,6&nbsp;% sur certains revenus du capital, dont les revenus de location meublée. Les revenus fonciers et les plus-values immobilières restent soumis à 17,2&nbsp;%.</p></article>
+    <article><span class="tag grey">Rappel</span><h4>Location meublée (LMNP)</h4><p>Pour les cessions intervenues depuis le 15&nbsp;février 2025, les amortissements déduits sont réintégrés dans le calcul de la plus-value, hors résidences de services.</p></article>
+    <article><span class="tag grey">Rappel</span><h4>Loi Climat et résilience</h4><p>Les logements classés G ne peuvent plus être proposés à la location depuis le 1<sup>er</sup>&nbsp;janvier 2025&nbsp;; les logements classés F suivront le 1<sup>er</sup>&nbsp;janvier 2028, puis E le 1<sup>er</sup>&nbsp;janvier 2034.</p></article>
+  </div>
+  <footer class="folio"><span>URBAIN V · Guide de la fiscalité 2026</span><span class="pg">03</span></footer>
+</section>
+
+<!-- 4 — Panorama -->
+<section class="page">
+  <div class="head">
+    <p class="eyebrow"><b>02</b>Panorama</p>
+    <h2>Les dispositifs en un coup d’œil.</h2>
+    <p class="lead">Les principaux régimes applicables à l’ancien en 2026, comparés selon les mêmes critères. Chacun fait l’objet d’une fiche détaillée dans les pages suivantes.</p>
+  </div>
+  <table class="pano">
+    <colgroup><col class="c0"><col><col><col><col><col></colgroup>
+    <thead><tr><th></th><th>Malraux</th><th>Monuments historiques</th><th>Déficit foncier</th><th>Denormandie</th><th>Dispositif Jeanbrun</th></tr></thead>
+    <tbody>
+      <tr><th>Nature de l’avantage</th><td>Réduction d’impôt</td><td>Déduction du revenu global</td><td>Imputation d’un déficit sur le revenu global</td><td>Réduction d’impôt</td><td>Amortissement déductible des revenus fonciers</td></tr>
+      <tr><th>Immeubles concernés</th><td>Immeuble situé en site patrimonial remarquable, restauré en totalité</td><td>Immeuble classé ou inscrit au titre des monuments historiques</td><td>Logement ancien donné en location nue</td><td>Logement ancien dans une commune éligible (Action cœur de ville, ORT)</td><td>Logement en immeuble collectif, neuf ou ancien rénové</td></tr>
+      <tr><th>Base et taux</th><td>22&nbsp;% ou 30&nbsp;% des dépenses de restauration</td><td>100&nbsp;% des charges et travaux (immeuble loué)</td><td>Travaux d’entretien, de réparation et d’amélioration</td><td>12&nbsp;%, 18&nbsp;% ou 21&nbsp;% du prix de revient</td><td>3 à 4&nbsp;% par an dans l’ancien, 3,5 à 5,5&nbsp;% dans le neuf</td></tr>
+      <tr><th>Plafond</th><td>400&nbsp;000&nbsp;€ de dépenses sur quatre ans</td><td>Aucun</td><td>10&nbsp;700&nbsp;€ par an sur le revenu global, 21&nbsp;400&nbsp;€ (rénovation énergétique)</td><td>300&nbsp;000&nbsp;€ par an et 5&nbsp;500&nbsp;€ par m²</td><td>8&nbsp;000 à 12&nbsp;000&nbsp;€ de déduction par an et par foyer</td></tr>
+      <tr><th>Engagement</th><td>Location nue, résidence principale, 9&nbsp;ans</td><td>Conservation du bien 15&nbsp;ans</td><td>Location jusqu’au 31&nbsp;décembre de la 3<sup>e</sup>&nbsp;année suivant l’imputation</td><td>Location nue, résidence principale, 6, 9 ou 12&nbsp;ans</td><td>Location nue, résidence principale, 9&nbsp;ans</td></tr>
+      <tr><th>Loyers et ressources plafonnés</th><td class="n">Non</td><td class="n">Non</td><td class="n">Non</td><td class="y">Oui</td><td class="y">Oui</td></tr>
+      <tr><th>Plafonnement global des niches (10&nbsp;000&nbsp;€)</th><td class="n">Non concerné</td><td class="n">Non concerné</td><td class="n">Non concerné</td><td class="y">Inclus</td><td class="n">Non concerné (plafond propre)</td></tr>
+      <tr><th>Échéance</th><td>Dispositif permanent</td><td>Dispositif permanent</td><td>Régime permanent&nbsp;; majoration jusqu’au 31/12/2027</td><td>Acquisitions jusqu’au 31/12/2027</td><td>Acquisitions du 21/02/2026 au 31/12/2028</td></tr>
+    </tbody>
+  </table>
+  <div class="reading">
+    <div><h4>Hors plafonnement</h4><p>Malraux, Monuments historiques et déficit foncier ne sont pas soumis au plafonnement global des niches fiscales de 10&nbsp;000&nbsp;€ par an.</p></div>
+    <div><h4>Revenus fonciers existants</h4><p>Le déficit foncier et le dispositif Jeanbrun s’imputent d’abord sur les revenus fonciers&nbsp;: ils intéressent en priorité les contribuables qui en perçoivent déjà.</p></div>
+    <div><h4>Loyers encadrés</h4><p>Denormandie et Jeanbrun imposent des plafonds de loyers et de ressources des locataires&nbsp;; Malraux et Monuments historiques n’en prévoient pas.</p></div>
+  </div>
+  <footer class="folio"><span>URBAIN V · Guide de la fiscalité 2026</span><span class="pg">04</span></footer>
+</section>
+
+<!-- 5 — Malraux -->
+<section class="page">
+  <div class="frame photo bare f-photo"><img src="img/facade-cartouche.jpg" alt="" style="object-position:50% 34%"><span class="no">I</span></div>
+  <p class="cap f-cap"><span class="pl">Pl. I</span><span>Façade ornée d’un cartouche sculpté (photographie d’illustration)</span></p>
+  <div class="f-head">
+    <p class="eyebrow"><b>03</b>Malraux</p>
+    <h2>Restaurer en site patrimonial remarquable.</h2>
+    <p class="lead">Une réduction d’impôt sur le montant des travaux de restauration complète d’un immeuble ancien situé dans un secteur protégé, en contrepartie d’un engagement de location.</p>
+    <div class="kpis">
+      <div class="kpi"><b>22&nbsp;% ou 30&nbsp;%</b><span>des dépenses de restauration, selon le secteur</span></div>
+      <div class="kpi"><b>400&nbsp;000&nbsp;€</b><span>de dépenses retenues sur quatre années consécutives</span></div>
+      <div class="kpi"><b>9&nbsp;ans</b><span>de location nue en résidence principale</span></div>
+    </div>
+    <table class="fiche">
+      <tr><th>Type de bien</th><td>Immeubles bâtis situés dans un site patrimonial remarquable (SPR) et faisant l’objet d’une restauration complète. Les travaux sont autorisés (permis de construire ou déclaration préalable) et suivis par l’Architecte des Bâtiments de France.</td></tr>
+      <tr><th>Mécanisme et avantage</th><td><p><b>30&nbsp;%</b> des dépenses lorsque l’immeuble est situé dans un SPR couvert par un plan de sauvegarde et de mise en valeur (PSMV) approuvé.</p><p><b>22&nbsp;%</b> lorsque le SPR est couvert par un plan de valorisation de l’architecture et du patrimoine (PVAP) approuvé, ou lorsque la restauration a été déclarée d’utilité publique.</p><p>Seuls les travaux ouvrent droit à la réduction, non le prix d’acquisition de l’immeuble.</p></td></tr>
+      <tr><th>Plafonds et limites</th><td>Dépenses retenues dans la limite de 400&nbsp;000&nbsp;€ sur quatre années consécutives, soit une réduction maximale de 120&nbsp;000&nbsp;€ au taux de 30&nbsp;% ou de 88&nbsp;000&nbsp;€ au taux de 22&nbsp;%. La fraction qui excède l’impôt dû est reportable sur les trois années suivantes. <b>Hors plafonnement global des niches fiscales.</b></td></tr>
+      <tr><th>Obligations</th><td>Location nue à usage de résidence principale du locataire pendant 9&nbsp;ans, conclue dans les 12&nbsp;mois suivant l’achèvement des travaux. Le locataire ne peut être un membre du foyer fiscal, un ascendant ou un descendant du propriétaire.</td></tr>
+      <tr><th>Calendrier de l’avantage</th><td>La réduction s’impute sur l’impôt de l’année du paiement des travaux&nbsp;: une opération dont les travaux s’étalent sur plusieurs années ouvre droit à une réduction chaque année de paiement.</td></tr>
+      <tr><th>Intérêt patrimonial</th><td>Aucun plafond de loyer ni de ressources du locataire. Des immeubles de centre-ville restaurés en totalité, dans des secteurs protégés où l’offre est rare.</td></tr>
+    </table>
+    <p class="f-note"><b>Points d’attention.</b> Respect des prescriptions de l’Architecte des Bâtiments de France, durée et coût des travaux, part des travaux dans le prix global, liquidité du bien à la revente.</p>
+    <p class="f-ref">Code général des impôts, art.&nbsp;199&nbsp;tervicies</p>
+  </div>
+  <footer class="folio"><span>URBAIN V · Guide de la fiscalité 2026</span><span class="pg">05</span></footer>
+</section>
+
+<!-- 6 — Monuments historiques -->
+<section class="page">
+  <div class="frame photo bare f-photo"><img src="img/escalier-fer-forge.jpg" alt="" style="object-position:50% 52%"><span class="no">II</span></div>
+  <p class="cap f-cap"><span class="pl">Pl. II</span><span>Rampe d’escalier d’honneur en fer forgé (photographie d’illustration)</span></p>
+  <div class="f-head">
+    <p class="eyebrow"><b>04</b>Monuments historiques</p>
+    <h2>Restaurer un monument protégé.</h2>
+    <p class="lead">Un régime de déduction sans plafond des charges et des travaux de restauration, réservé aux immeubles classés ou inscrits, en contrepartie d’un engagement de conservation.</p>
+    <div class="kpis">
+      <div class="kpi"><b>100&nbsp;%</b><span>des charges et travaux déductibles lorsque l’immeuble est loué</span></div>
+      <div class="kpi"><b>Sans plafond</b><span>d’imputation du déficit sur le revenu global</span></div>
+      <div class="kpi"><b>15&nbsp;ans</b><span>de conservation du bien</span></div>
+    </div>
+    <table class="fiche">
+      <tr><th>Type de bien</th><td>Immeubles classés ou inscrits au titre des monuments historiques. Les travaux sont autorisés et contrôlés par les services de l’État (direction régionale des affaires culturelles).</td></tr>
+      <tr><th>Mécanisme et avantage</th><td><p><b>Immeuble donné en location</b>&nbsp;: les charges foncières, dont les travaux de restauration et les intérêts d’emprunt, sont déductibles des revenus fonciers&nbsp;; le déficit qui en résulte s’impute sur le revenu global sans limitation de montant.</p><p><b>Immeuble non loué, occupé par son propriétaire</b>&nbsp;: charges déductibles du revenu global à 50&nbsp;%, ou à 100&nbsp;% si l’immeuble est ouvert à la visite, ainsi que pour la part des travaux subventionnés restant à charge.</p></td></tr>
+      <tr><th>Plafonds et limites</th><td>Aucun plafond de déduction. <b>Hors plafonnement global des niches fiscales.</b> Le déficit global qui n’a pu être imputé est reportable sur les six années suivantes.</td></tr>
+      <tr><th>Obligations</th><td>Conservation de l’immeuble pendant au moins 15&nbsp;ans à compter de son acquisition. Détention en direct ou par une société civile non soumise à l’impôt sur les sociétés, sous conditions. Immeubles divisés en copropriété&nbsp;: éligibles sous conditions spécifiques, notamment d’affectation à l’habitation.</td></tr>
+      <tr><th>Calendrier de l’avantage</th><td>Déduction au titre de l’année du paiement des dépenses.</td></tr>
+      <tr><th>Intérêt patrimonial</th><td>Aucun plafond de loyer ni de ressources. Un patrimoine rare et protégé. En cas de transmission, exonération possible des droits de mutation à titre gratuit en contrepartie d’une convention conclue avec l’État, comportant notamment des conditions d’ouverture au public (CGI, art.&nbsp;795&nbsp;A).</td></tr>
+    </table>
+    <p class="f-note"><b>Points d’attention.</b> Travaux encadrés par l’État, aux délais et aux coûts spécifiques&nbsp;; engagement de conservation de longue durée&nbsp;; conditions particulières pour les immeubles en copropriété, à vérifier pour chaque opération.</p>
+    <p class="f-ref">Code général des impôts, art.&nbsp;156 et 156&nbsp;bis</p>
+  </div>
+  <footer class="folio"><span>URBAIN V · Guide de la fiscalité 2026</span><span class="pg">06</span></footer>
+</section>
+
+<!-- 7 — Déficit foncier -->
+<section class="page">
+  <div class="f-head top">
+    <p class="eyebrow"><b>05</b>Déficit foncier</p>
+    <h2>Rénover un logement ancien mis en location.</h2>
+    <p class="lead">Les travaux réalisés dans un logement loué nu réduisent les revenus fonciers et, au-delà, une partie du revenu global. Un régime de droit commun, accessible à tout immeuble ancien.</p>
+    <div class="kpis">
+      <div class="kpi"><b>10&nbsp;700&nbsp;€</b><span>imputables chaque année sur le revenu global</span></div>
+      <div class="kpi"><b>21&nbsp;400&nbsp;€</b><span>pour la rénovation énergétique, dépenses payées jusqu’au 31/12/2027</span></div>
+      <div class="kpi"><b>10&nbsp;ans</b><span>de report du solde sur les revenus fonciers</span></div>
+    </div>
+    <table class="fiche">
+      <tr><th>Type de bien</th><td>Logements anciens donnés en location nue, dont les revenus sont imposés au régime réel (le micro-foncier ne permet pas de constater un déficit).</td></tr>
+      <tr><th>Mécanisme et avantage</th><td><p>Les dépenses d’entretien, de réparation et d’amélioration sont déductibles des revenus fonciers, à l’exclusion des travaux de construction, de reconstruction ou d’agrandissement.</p><p>Lorsque les charges dépassent les loyers, le déficit, hors intérêts d’emprunt, s’impute sur le revenu global dans la limite de <b>10&nbsp;700&nbsp;€</b> par an. Le surplus et la part liée aux intérêts s’imputent sur les revenus fonciers des dix années suivantes.</p></td></tr>
+      <tr><th>Plafond majoré</th><td><b>21&nbsp;400&nbsp;€</b> par an pour les dépenses de rénovation énergétique qui font passer le logement d’une classe énergétique E, F ou G à une classe A, B, C ou D, payées du 1<sup>er</sup>&nbsp;janvier 2023 au 31&nbsp;décembre 2027.</td></tr>
+      <tr><th>Obligations</th><td>Location nue maintenue jusqu’au 31&nbsp;décembre de la troisième année suivant celle de l’imputation, faute de quoi l’imputation sur le revenu global est remise en cause.</td></tr>
+      <tr><th>Intérêt</th><td>Économie d’impôt au taux marginal d’imposition, majorée des prélèvements sociaux de 17,2&nbsp;% pour la part imputée sur des revenus fonciers. Non concerné par le plafonnement global des niches fiscales.</td></tr>
+    </table>
+    <div class="sub-h">
+      <p class="eyebrow plain">Comparaison</p>
+      <h3>Régime général ou Monument historique&nbsp;?</h3>
+    </div>
+    <table class="cmp">
+      <thead><tr><th style="width:40mm"></th><th>Déficit foncier, régime général</th><th>Monument historique loué</th></tr></thead>
+      <tbody>
+        <tr><th>Imputation sur le revenu global</th><td>10&nbsp;700&nbsp;€ par an (21&nbsp;400&nbsp;€ pour la rénovation énergétique)</td><td>Sans limitation de montant</td></tr>
+        <tr><th>Intérêts d’emprunt</th><td>Imputables sur les seuls revenus fonciers</td><td>Compris dans le déficit imputable</td></tr>
+        <tr><th>Report du solde</th><td>10&nbsp;ans sur les revenus fonciers</td><td>6&nbsp;ans sur le revenu global</td></tr>
+        <tr><th>Engagement</th><td>Location jusqu’au 31&nbsp;décembre de la 3<sup>e</sup>&nbsp;année</td><td>Conservation du bien 15&nbsp;ans</td></tr>
+      </tbody>
+    </table>
+    <p class="f-ref">Code général des impôts, art.&nbsp;156&nbsp;; loi de finances pour 2026, art.&nbsp;47</p>
+  </div>
+  <footer class="folio"><span>URBAIN V · Guide de la fiscalité 2026</span><span class="pg">07</span></footer>
+</section>
+
+<!-- 8 — Denormandie -->
+<section class="page">
+  <div class="frame photo bare f-photo"><img src="img/enduit-mains.jpg" alt="" style="object-position:50% 50%"><span class="no">III</span></div>
+  <p class="cap f-cap"><span class="pl">Pl. III</span><span>Enduit appliqué à la lisseuse (photographie d’illustration)</span></p>
+  <div class="f-head">
+    <p class="eyebrow"><b>06</b>Denormandie</p>
+    <h2>Rénover dans les villes moyennes.</h2>
+    <p class="lead">Une réduction d’impôt pour l’achat d’un logement ancien à rénover dans les communes engagées dans la revitalisation de leur centre, en contrepartie d’une location à loyer encadré.</p>
+    <div class="kpis">
+      <div class="kpi"><b>12 à 21&nbsp;%</b><span>du prix de revient, selon la durée de location</span></div>
+      <div class="kpi"><b>300&nbsp;000&nbsp;€</b><span>de prix de revient retenu par an, et 5&nbsp;500&nbsp;€ par m²</span></div>
+      <div class="kpi"><b>25&nbsp;%</b><span>du coût total de l’opération consacré aux travaux</span></div>
+    </div>
+    <table class="fiche">
+      <tr><th>Type de bien</th><td>Logements anciens situés dans une commune dont le besoin de réhabilitation est reconnu (programme Action cœur de ville notamment) ou ayant signé une convention d’opération de revitalisation de territoire (ORT), faisant l’objet de travaux d’amélioration réalisés par une entreprise.</td></tr>
+      <tr><th>Mécanisme et avantage</th><td>Réduction d’impôt calculée sur le prix de revient (acquisition et travaux)&nbsp;: <b>12&nbsp;%</b> pour un engagement de location de 6&nbsp;ans, <b>18&nbsp;%</b> pour 9&nbsp;ans, <b>21&nbsp;%</b> pour 12&nbsp;ans, répartie sur la durée de l’engagement.</td></tr>
+      <tr><th>Plafonds et limites</th><td>Prix de revient retenu dans la limite de 300&nbsp;000&nbsp;€ par an et de 5&nbsp;500&nbsp;€ par m² de surface habitable, pour deux logements au plus par an. <b>Avantage compris dans le plafonnement global des niches fiscales</b> (10&nbsp;000&nbsp;€ par an).</td></tr>
+      <tr><th>Obligations</th><td>Travaux représentant au moins 25&nbsp;% du coût total de l’opération, achevés au plus tard le 31&nbsp;décembre de la deuxième année suivant l’acquisition. Location nue à usage de résidence principale, conclue dans les 12&nbsp;mois suivant l’achèvement. Loyers et ressources des locataires plafonnés. Location possible à un ascendant ou à un descendant qui ne fait pas partie du foyer fiscal.</td></tr>
+      <tr><th>Échéance</th><td>Acquisitions réalisées jusqu’au 31&nbsp;décembre 2027 (loi de finances pour 2026).</td></tr>
+    </table>
+    <p class="f-note"><b>À noter.</b> Loc’Avantages, réduction d’impôt accordée pour la location d’un logement à loyer abordable dans le cadre d’une convention avec l’Anah, est également prorogé jusqu’au 31&nbsp;décembre 2027.</p>
+    <p class="f-ref">Code général des impôts, art.&nbsp;199&nbsp;novovicies</p>
+  </div>
+  <footer class="folio"><span>URBAIN V · Guide de la fiscalité 2026</span><span class="pg">08</span></footer>
+</section>
+
+<!-- 9 — Dispositif Jeanbrun -->
+<section class="page">
+  <div class="frame photo bare f-photo"><img src="img/immeuble-balcons.jpg" alt="" style="object-position:50% 40%"><span class="no">IV</span></div>
+  <p class="cap f-cap"><span class="pl">Pl. IV</span><span>Façade d’immeuble ancien à balcons (photographie d’illustration)</span></p>
+  <div class="f-head">
+    <p class="eyebrow"><b>07</b>Dispositif Jeanbrun</p>
+    <h2>Le nouveau statut du bailleur privé.</h2>
+    <p class="lead">Créé par la loi de finances pour 2026, le dispositif fiscal «&nbsp;Relance Logement&nbsp;», dit Jeanbrun, permet de déduire chaque année un amortissement du logement de ses revenus fonciers.</p>
+    <div class="kpis">
+      <div class="kpi"><b>3 à 4&nbsp;%</b><span>d’amortissement annuel dans l’ancien rénové</span></div>
+      <div class="kpi"><b>8&nbsp;000&nbsp;€</b><span>de déduction par an et par foyer, jusqu’à 12&nbsp;000&nbsp;€</span></div>
+      <div class="kpi"><b>9&nbsp;ans</b><span>de location nue en résidence principale</span></div>
+    </div>
+    <table class="fiche">
+      <tr><th>Type de bien</th><td>Logements situés dans un immeuble collectif (bâtiment d’habitation regroupant plus de deux logements superposés)&nbsp;: logements neufs, ou logements anciens faisant l’objet de travaux d’au moins 30&nbsp;% du prix d’acquisition et atteignant après travaux une étiquette énergétique A ou B. Les immeubles classés ou inscrits au titre des monuments historiques sont exclus.</td></tr>
+      <tr><th>Mécanisme et avantage</th><td><p>Déduction des revenus fonciers d’un amortissement annuel, calculé sur 80&nbsp;% du prix d’acquisition, majoré des travaux dans l’ancien.</p><p>Taux dans l’ancien&nbsp;: <b>3&nbsp;%</b> (loyer intermédiaire), <b>3,5&nbsp;%</b> (social), <b>4&nbsp;%</b> (très social). Dans le neuf&nbsp;: 3,5&nbsp;%, 4,5&nbsp;% et 5,5&nbsp;%.</p></td></tr>
+      <tr><th>Plafonds et limites</th><td>Déduction plafonnée à 8&nbsp;000&nbsp;€ par an et par foyer fiscal, portée à 10&nbsp;000&nbsp;€ (location sociale) ou 12&nbsp;000&nbsp;€ (location très sociale) lorsque ces loyers représentent au moins la moitié des revenus locatifs concernés. Le cumul des amortissements ne peut excéder la valeur du bien hors terrain.</td></tr>
+      <tr><th>Obligations</th><td>Acquisition entre le 21&nbsp;février 2026 et le 31&nbsp;décembre 2028. Location nue à usage de résidence principale pendant au moins 9&nbsp;ans, effective dans les 12&nbsp;mois suivant l’acquisition ou l’achèvement. Loyers et ressources des locataires plafonnés. Location à un membre de la famille exclue.</td></tr>
+      <tr><th>Cumuls et revente</th><td>Non cumulable, dans l’ancien, avec les dispositifs Malraux, Denormandie ou Pinel pour le même logement. En cas de non-respect des engagements, les amortissements déduits sont réintégrés. À la revente, les amortissements déduits sont pris en compte dans le calcul de la plus-value.</td></tr>
+    </table>
+    <p class="f-note"><b>Point d’attention.</b> Dispositif récent&nbsp;: les plafonds de loyers et de ressources et la doctrine administrative sont à vérifier au moment de l’investissement.</p>
+    <p class="f-ref">Loi de finances pour 2026, art.&nbsp;47&nbsp;; Code général des impôts, art.&nbsp;31</p>
+  </div>
+  <footer class="folio"><span>URBAIN V · Guide de la fiscalité 2026</span><span class="pg">09</span></footer>
+</section>
+
+<!-- 10 — Cas pratiques -->
+<section class="page">
+  <div class="head">
+    <p class="eyebrow"><b>08</b>Cas pratiques</p>
+    <h2>Deux exemples chiffrés.</h2>
+    <p class="lead">Exemples théoriques, destinés à illustrer les mécanismes. Ils ne décrivent pas une opération URBAIN V et ne préjugent pas de votre situation fiscale.</p>
+  </div>
+  <div class="cases">
+    <div class="case">
+      <div>
+        <p class="eyebrow plain">Exemple 1</p>
+        <h3>Malraux, secteur couvert par un PSMV (30&nbsp;%)</h3>
+        <ul class="hyp">
+          <li>Prix du bien hors travaux&nbsp;: <b>150&nbsp;000&nbsp;€</b></li>
+          <li>Travaux de restauration éligibles&nbsp;: <b>250&nbsp;000&nbsp;€</b>, payés pour moitié en N et en N+1</li>
+          <li>Impôt sur le revenu du foyer&nbsp;: au moins <b>37&nbsp;500&nbsp;€</b> par an avant réduction</li>
+        </ul>
+      </div>
+      <div>
+        <table class="calc">
+          <thead><tr><th>Année</th><th>Travaux payés</th><th class="r">Taux</th><th class="r">Réduction d’impôt</th></tr></thead>
+          <tbody>
+            <tr><td>N</td><td>125&nbsp;000&nbsp;€</td><td class="r">30&nbsp;%</td><td class="r">37&nbsp;500&nbsp;€</td></tr>
+            <tr><td>N+1</td><td>125&nbsp;000&nbsp;€</td><td class="r">30&nbsp;%</td><td class="r">37&nbsp;500&nbsp;€</td></tr>
+          </tbody>
+          <tfoot><tr><td>Total</td><td>250&nbsp;000&nbsp;€</td><td class="r"></td><td class="r">75&nbsp;000&nbsp;€</td></tr></tfoot>
+        </table>
+        <p class="res"><b>75&nbsp;000&nbsp;€</b> de réduction d’impôt, hors plafonnement global des niches fiscales, en contrepartie d’une location nue de 9&nbsp;ans. Les dépenses retenues (250&nbsp;000&nbsp;€) restent sous le plafond de 400&nbsp;000&nbsp;€ sur quatre ans.</p>
+      </div>
+    </div>
+    <div class="case">
+      <div>
+        <p class="eyebrow plain">Exemple 2</p>
+        <h3>Déficit foncier, régime général</h3>
+        <ul class="hyp">
+          <li>Revenus fonciers existants&nbsp;: <b>18&nbsp;000&nbsp;€</b> par an</li>
+          <li>Travaux déductibles payés en N&nbsp;: <b>60&nbsp;000&nbsp;€</b></li>
+          <li>Taux marginal d’imposition constant de <b>41&nbsp;%</b>&nbsp;; prélèvements sociaux de <b>17,2&nbsp;%</b></li>
+          <li>Pour simplifier&nbsp;: ni intérêts d’emprunt, ni loyers du logement rénové</li>
+        </ul>
+      </div>
+      <div>
+        <table class="calc">
+          <thead><tr><th>Année</th><th>Imputation</th><th class="r">Montant</th><th class="r">Taux</th><th class="r">Économie</th></tr></thead>
+          <tbody>
+            <tr><td>N</td><td>Revenus fonciers existants</td><td class="r">18&nbsp;000&nbsp;€</td><td class="r">58,2&nbsp;%</td><td class="r">10&nbsp;476&nbsp;€</td></tr>
+            <tr><td>N</td><td>Revenu global (plafond)</td><td class="r">10&nbsp;700&nbsp;€</td><td class="r">41&nbsp;%</td><td class="r">4&nbsp;387&nbsp;€</td></tr>
+            <tr><td>N+1</td><td>Revenus fonciers (report)</td><td class="r">18&nbsp;000&nbsp;€</td><td class="r">58,2&nbsp;%</td><td class="r">10&nbsp;476&nbsp;€</td></tr>
+            <tr><td>N+2</td><td>Revenus fonciers (report)</td><td class="r">13&nbsp;300&nbsp;€</td><td class="r">58,2&nbsp;%</td><td class="r">7&nbsp;741&nbsp;€</td></tr>
+          </tbody>
+          <tfoot><tr><td>Total</td><td></td><td class="r">60&nbsp;000&nbsp;€</td><td class="r"></td><td class="r">33&nbsp;080&nbsp;€</td></tr></tfoot>
+        </table>
+        <p class="res"><b>33&nbsp;080&nbsp;€</b> d’impôt et de prélèvements sociaux économisés pour 60&nbsp;000&nbsp;€ de travaux, à condition de maintenir la location jusqu’au 31&nbsp;décembre de l’année N+3.</p>
+      </div>
+    </div>
+  </div>
+  <p class="case-foot">Montants arrondis à l’euro. Taux de 58,2&nbsp;% = taux marginal de 41&nbsp;% + prélèvements sociaux de 17,2&nbsp;% sur les revenus fonciers. En pratique, l’imputation peut abaisser le taux marginal du foyer&nbsp;; une simulation personnalisée reste indispensable.</p>
+  <footer class="folio"><span>URBAIN V · Guide de la fiscalité 2026</span><span class="pg">10</span></footer>
+</section>
+
+<!-- 11 — Repères fiscaux -->
+<section class="page">
+  <div class="head">
+    <p class="eyebrow"><b>09</b>Repères</p>
+    <h2>Repères fiscaux 2026.</h2>
+  </div>
+  <div class="marks">
+    <div>
+      <div class="mark"><h4>Plafonnement global des niches fiscales</h4><p>10&nbsp;000&nbsp;€ par an et par foyer pour la plupart des réductions et crédits d’impôt, dont Denormandie et Loc’Avantages (18&nbsp;000&nbsp;€ pour certains investissements outre-mer et les SOFICA). Malraux, Monuments historiques, déficit foncier et dispositif Jeanbrun n’y sont pas soumis.</p></div>
+      <div class="mark"><h4>Prélèvements sociaux</h4><p>17,2&nbsp;% sur les revenus fonciers et les plus-values immobilières&nbsp;; 18,6&nbsp;% sur les revenus de location meublée, depuis la loi de financement de la sécurité sociale pour 2026.</p></div>
+      <div class="mark"><h4>TVA sur les travaux</h4><p>10&nbsp;% pour les travaux d’amélioration, de transformation, d’aménagement et d’entretien dans les logements achevés depuis plus de deux ans&nbsp;; 5,5&nbsp;% pour les travaux de rénovation énergétique&nbsp;; 20&nbsp;% lorsque les travaux aboutissent à la production d’un immeuble neuf.</p></div>
+      <div class="mark"><h4>Impôt sur la fortune immobilière</h4><p>Les biens immobiliers, y compris ceux qui ouvrent droit à un avantage fiscal, entrent dans l’assiette de l’IFI lorsque le patrimoine immobilier net du foyer dépasse 1,3&nbsp;M€. La loi de finances pour 2026 n’a pas modifié ce régime.</p></div>
+      <div class="mark"><h4>Loi Climat et résilience</h4><p>Calendrier d’interdiction de mise en location des logements énergivores, en l’état des textes.</p>
+        <div class="dpe" style="margin-top:3mm">
+          <div class="dpe-row"><span class="dpe-bar" style="--w:34%;--c:var(--dpe-a)">A</span><span class="dpe-note"></span></div>
+          <div class="dpe-row"><span class="dpe-bar" style="--w:44%;--c:var(--dpe-b);--t:var(--dpe-ink)">B</span><span class="dpe-note"></span></div>
+          <div class="dpe-row"><span class="dpe-bar" style="--w:54%;--c:var(--dpe-c);--t:var(--dpe-ink)">C</span><span class="dpe-note"></span></div>
+          <div class="dpe-row"><span class="dpe-bar" style="--w:64%;--c:var(--dpe-d);--t:var(--dpe-ink)">D</span><span class="dpe-note"></span></div>
+          <div class="dpe-row"><span class="dpe-bar" style="--w:74%;--c:var(--dpe-e);--t:var(--dpe-ink)">E</span><span class="dpe-note"><b>1<sup>er</sup>&nbsp;janv. 2034</b>Interdiction</span></div>
+          <div class="dpe-row"><span class="dpe-bar" style="--w:86%;--c:var(--dpe-f)">F</span><span class="dpe-note"><b>1<sup>er</sup>&nbsp;janv. 2028</b>Interdiction</span></div>
+          <div class="dpe-row"><span class="dpe-bar" style="--w:98%;--c:var(--dpe-g)">G</span><span class="dpe-note"><b>Depuis 2025</b>Interdit</span></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="mark"><h4>Plus-values immobilières</h4><p>Imposition à 19&nbsp;% (impôt sur le revenu) et 17,2&nbsp;% (prélèvements sociaux) après abattements pour durée de détention, avec une surtaxe de 2 à 6&nbsp;% au-delà de 50&nbsp;000&nbsp;€ de plus-value imposable. La résidence principale est exonérée.</p>
+        <table>
+          <thead><tr><th>Durée de détention</th><th>Impôt sur le revenu</th><th>Prélèvements sociaux</th></tr></thead>
+          <tbody>
+            <tr><td>Jusqu’à 5 ans</td><td>Aucun abattement</td><td>Aucun abattement</td></tr>
+            <tr><td>6<sup>e</sup> à 21<sup>e</sup> année</td><td>6&nbsp;% par an</td><td>1,65&nbsp;% par an</td></tr>
+            <tr><td>22<sup>e</sup> année</td><td>4&nbsp;%</td><td>1,60&nbsp;%</td></tr>
+            <tr><td>23<sup>e</sup> à 30<sup>e</sup> année</td><td>Exonéré</td><td>9&nbsp;% par an</td></tr>
+            <tr><td>Exonération totale</td><td>Après 22 ans</td><td>Après 30 ans</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="mark"><h4>Location meublée (LMNP)</h4><p>Pour les cessions intervenues depuis le 15&nbsp;février 2025, les amortissements déduits sont réintégrés dans le calcul de la plus-value, sauf pour les résidences de services (étudiants, seniors, Ehpad).</p></div>
+      <div class="mark"><h4>Cadre juridique des opérations</h4><p><b style="font-weight:500;color:var(--ink)">Vente d’immeuble à rénover (VIR).</b> Le vendeur s’engage à réaliser les travaux dans un délai convenu et fournit une garantie financière d’achèvement. Le prix des travaux est payé à l’avancement&nbsp;: au plus 50&nbsp;% à la moitié des travaux, 95&nbsp;% à leur achèvement, le solde à la livraison.</p><p><b style="font-weight:500;color:var(--ink)">Association syndicale libre (ASL).</b> Elle réunit les propriétaires d’un immeuble pour faire réaliser les travaux de restauration&nbsp;; on la rencontre souvent en Malraux et en Monuments historiques.</p></div>
+    </div>
+  </div>
+  <footer class="folio"><span>URBAIN V · Guide de la fiscalité 2026</span><span class="pg">11</span></footer>
+</section>
+
+<!-- 12 — Investir avec URBAIN V -->
+<section class="page night">
+  <img class="back-star" src="logo/embleme.svg" alt="">
+  <div class="gb-main">
+    <p class="eyebrow">Investir avec URBAIN V</p>
+    <h2>Une étude adaptée à votre situation.</h2>
+    <p class="t">URBAIN V restaure des immeubles et des demeures de caractère en Dauphiné et dans tout le grand quart sud-est de la France. Pour chaque opération, nous précisons le régime fiscal applicable et travaillons avec votre conseiller en gestion de patrimoine, votre notaire ou votre expert-comptable.</p>
+  </div>
+  <div class="gb-contact">
+    <div>
+      <p class="eyebrow plain">Nous contacter</p>
+      <p class="l">163, cours de la Libération<br>38100 Grenoble<br><a href="tel:+33683480615">06&nbsp;83&nbsp;48&nbsp;06&nbsp;15</a><br><a href="mailto:contact@urbain-v.fr">contact@urbain-v.fr</a> · Sur rendez-vous</p>
+    </div>
+    <div class="gb-cta">
+      <a href="https://urbain-v.fr/contact/?objet=investir"><b>Demander une étude</b><span>urbain-v.fr/contact</span></a>
+      <a href="https://urbain-v.fr/operations/#avant-premiere"><b>Recevoir les avant-premières</b><span>urbain-v.fr/operations</span></a>
+    </div>
+  </div>
+  <div class="warn">
+    <p><b>Avertissement.</b> Ce guide présente des informations générales, à jour au 1<sup>er</sup>&nbsp;novembre 2026, sous réserve de l’évolution des textes, notamment dans le cadre de la loi de finances pour 2027, et de leur interprétation par l’administration fiscale. Il ne constitue ni un conseil fiscal ou juridique, ni un conseil en investissement.</p>
+    <p>Le bénéfice d’un avantage fiscal dépend de votre situation personnelle et du respect de conditions légales strictes&nbsp;; il ne doit pas être le seul motif d’un investissement. Tout investissement immobilier comporte des risques, notamment de vacance locative, de liquidité et d’évolution des prix. <b>Sources&nbsp;:</b> Légifrance, BOFiP-Impôts, ANIL, Service-public.fr.</p>
+  </div>
+  <img class="gb-logo" src="logo/urbain-v-blanc-vert.svg" alt="URBAIN V">
+  <p class="gb-base">Restaurer · Sublimer · Transmettre</p>
+  <p class="gb-legal">URBAIN V est une marque commerciale de GROUPE NOVELIA, SARL au capital de 2&nbsp;700&nbsp;000&nbsp;€, RCS Grenoble 948&nbsp;146&nbsp;691. Marque déposée à l’INPI (n°&nbsp;24&nbsp;5031295). Document non contractuel. Photographies d’illustration publiées sur Unsplash (licence Unsplash)&nbsp;; elles ne représentent pas des réalisations d’URBAIN V.</p>
+</section>
+
+</body>
+</html>
