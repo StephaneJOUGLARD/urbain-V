@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Actualités · URBAIN V</title>
+  <link>https://urbain-v.fr/actualites/</link>
+  <atom:link href="https://urbain-v.fr/actualites/flux.xml" rel="self" type="application/rss+xml"/>
+  <description>Loi Jeanbrun, déficit foncier, DPE, MaPrimeRénov’, copropriété : les actualités juridiques et techniques de la rénovation et de la réhabilitation des logements anciens, vérifiées et sourcées.</description>
+  <language>fr-fr</language>
+  <lastBuildDate>Sun, 08 Nov 2026 08:00:00 +0100</lastBuildDate>
+  <item>
+    <title>Projet de loi « Relance et décentralisation du logement » : ce qui pourrait changer pour l’ancien</title>
+    <link>https://urbain-v.fr/actualites/projet-de-loi-relance-logement-ancien-2026/</link>
+    <guid isPermaLink="true">https://urbain-v.fr/actualites/projet-de-loi-relance-logement-ancien-2026/</guid>
+    <pubDate>Sun, 08 Nov 2026 08:00:00 +0100</pubDate>
+    <category>Législation</category>
+    <description>Seuil de travaux du dispositif Jeanbrun abaissé à 20 %, remise en location des passoires F et G sous engagement de travaux : où en est le projet de loi « Relance et décentralisation du logement » ?</description>
+  </item>
+  <item>
+    <title>MaPrimeRénov’ : ce qui change pour les demandes déposées depuis le 1er septembre 2026</title>
+    <link>https://urbain-v.fr/actualites/maprimerenov-septembre-2026-nouvelles-regles/</link>
+    <guid isPermaLink="true">https://urbain-v.fr/actualites/maprimerenov-septembre-2026-nouvelles-regles/</guid>
+    <pubDate>Sun, 08 Nov 2026 08:00:00 +0100</pubDate>
+    <category>Aides à la rénovation</category>
+    <description>Forfaits supprimés, parcours par geste prolongé pour les passoires jusqu’à fin 2027, énergies fossiles exclues du parcours accompagné : les changements de MaPrimeRénov’ au 1er septembre 2026.</description>
+  </item>
+  <item>
+    <title>DPE : le coefficient de l’électricité abaissé à 1,7 au 1er janvier 2027</title>
+    <link>https://urbain-v.fr/actualites/dpe-2027-coefficient-electricite-1-7/</link>
+    <guid isPermaLink="true">https://urbain-v.fr/actualites/dpe-2027-coefficient-electricite-1-7/</guid>
+    <pubDate>Sun, 08 Nov 2026 08:00:00 +0100</pubDate>
+    <category>Performance énergétique</category>
+    <description>Un arrêté du 19 août 2026 abaisse de 1,9 à 1,7 le coefficient de conversion de l’électricité dans le DPE, à compter du 1er janvier 2027. Ce qui change pour les propriétaires et les bailleurs.</description>
+  </item>
+  <item>
+    <title>Loi Jeanbrun : le statut du bailleur privé ouvre l’amortissement aux logements anciens réhabilités</title>
+    <link>https://urbain-v.fr/actualites/loi-jeanbrun-2026-statut-bailleur-prive-ancien/</link>
+    <guid isPermaLink="true">https://urbain-v.fr/actualites/loi-jeanbrun-2026-statut-bailleur-prive-ancien/</guid>
+    <pubDate>Sun, 08 Nov 2026 08:00:00 +0100</pubDate>
+    <category>Fiscalité</category>
+    <description>Créé par la loi de finances pour 2026, le dispositif Jeanbrun permet d’amortir un logement ancien acquis entre le 21 février 2026 et le 31 décembre 2028, avec au moins 30 % de travaux et une étiquette A ou B.</description>
+  </item>
+  <item>
+    <title>Déficit foncier : le plafond de 21 400 € pour la rénovation énergétique prolongé jusqu’en 2027</title>
+    <link>https://urbain-v.fr/actualites/deficit-foncier-21400-euros-prolonge-2027/</link>
+    <guid isPermaLink="true">https://urbain-v.fr/actualites/deficit-foncier-21400-euros-prolonge-2027/</guid>
+    <pubDate>Sun, 08 Nov 2026 08:00:00 +0100</pubDate>
+    <category>Fiscalité</category>
+    <description>La loi de finances pour 2026 prolonge jusqu’au 31 décembre 2027 le plafond doublé du déficit foncier pour les travaux de rénovation énergétique. Le Denormandie reste ouvert jusqu’à fin 2027.</description>
+  </item>
+  <item>
+    <title>Copropriétés : le DPE collectif s’impose aussi aux immeubles de 50 lots ou moins</title>
+    <link>https://urbain-v.fr/actualites/dpe-collectif-coproprietes-50-lots-2026/</link>
+    <guid isPermaLink="true">https://urbain-v.fr/actualites/dpe-collectif-coproprietes-50-lots-2026/</guid>
+    <pubDate>Sun, 08 Nov 2026 08:00:00 +0100</pubDate>
+    <category>Copropriété</category>
+    <description>Depuis le 1er janvier 2026, les copropriétés de 50 lots ou moins doivent à leur tour disposer d’un diagnostic de performance énergétique collectif. Calendrier, utilité et points à vérifier avant d’acheter.</description>
+  </item>
+  <item>
+    <title>DPE : depuis le 1er janvier 2026, le chauffage électrique est mieux pris en compte</title>
+    <link>https://urbain-v.fr/actualites/dpe-2026-coefficient-electricite-1-9/</link>
+    <guid isPermaLink="true">https://urbain-v.fr/actualites/dpe-2026-coefficient-electricite-1-9/</guid>
+    <pubDate>Sun, 08 Nov 2026 08:00:00 +0100</pubDate>
+    <category>Performance énergétique</category>
+    <description>Depuis le 1er janvier 2026, le coefficient de conversion de l’électricité dans le DPE passe de 2,3 à 1,9. Selon le Gouvernement, environ 850 000 logements sortent du statut de passoire.</description>
+  </item>
+</channel>
+</rss>
