@@ -11,12 +11,13 @@ AddDefaultCharset utf-8
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # Redirection vers https://urbain-v.fr (sans www).
-  # À ACTIVER uniquement quand le certificat SSL Let's Encrypt est actif sur urbain-v.fr
-  # (Hébergement OVH > Multisite > SSL) : retirer le # des trois lignes ci-dessous.
-  # RewriteCond %{SERVER_PORT} 80 [OR]
-  # RewriteCond %{HTTP_HOST} ^www\. [NC]
-  # RewriteRule ^(.*)$ https://urbain-v.fr/$1 [R=301,L]
+  # Redirection permanente de http:// et de www. vers https://urbain-v.fr (sans www).
+  # Activée le 8 novembre 2026 : certificat SSL Let's Encrypt actif sur urbain-v.fr et
+  # www.urbain-v.fr (Hébergement OVH > Multisite > SSL). Si le certificat venait à
+  # être désactivé, remettre un # devant les trois lignes ci-dessous.
+  RewriteCond %{SERVER_PORT} 80 [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^(.*)$ https://urbain-v.fr/$1 [R=301,L]
 </IfModule>
 
 <IfModule mod_deflate.c>
