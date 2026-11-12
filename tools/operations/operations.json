@@ -1,0 +1,256 @@
+{
+  "_note": "Opérations présentées sur /operations/, dans l’ordre d’affichage. Après modification : python3 tools/operations/build.py, puis python3 tools/verifier.py. Portées et réalisées par URBAIN V (confirmé par Stéphane Jouglard le 12 novembre 2026). Aucun visuel tant que URBAIN V n’en détient pas les droits.",
+  "intro": "De la cité Vauban de Briançon au Comtat Venaissin et aux portes de Genève : trois immeubles protégés au titre du patrimoine, restaurés en appartements anciens rénovés.",
+  "operations": [
+    {
+      "slug": "briancon-rue-du-temple",
+      "nom": "Rue du Temple",
+      "ville": "Briançon",
+      "departement": "Hautes-Alpes",
+      "code_postal": "05100",
+      "lieu": "Briançon · Hautes-Alpes",
+      "etiquette": "Loi Malraux",
+      "regime": "Loi Malraux",
+      "logements": 13,
+      "titre": "Rue du Temple : deux immeubles de la cité Vauban restaurés en loi Malraux",
+      "titre_seo": "Loi Malraux à Briançon, rue du Temple : 13 appartements · URBAIN V",
+      "description": "Cité Vauban de Briançon : deux immeubles de la rue du Temple restaurés par URBAIN V en 13 appartements anciens rénovés, éligibles à la loi Malraux.",
+      "chapo": "Dans la ville haute de Briançon, ceinte des fortifications de Vauban inscrites au patrimoine mondial de l’UNESCO, URBAIN V prépare la restauration de deux immeubles de la rue du Temple : treize appartements anciens rénovés, du T1 au T3 en duplex, éligibles à la loi Malraux.",
+      "carte": "Deux immeubles de la ville haute, au cœur des fortifications de Vauban inscrites au patrimoine mondial de l’UNESCO, restaurés en treize appartements.",
+      "resume": [
+        [
+          "Programme",
+          "13 appartements, du T1 au T3 en duplex"
+        ],
+        [
+          "Patrimoine",
+          "Site patrimonial remarquable de la cité Vauban"
+        ],
+        [
+          "Part des travaux",
+          "81 % de l’investissement"
+        ]
+      ],
+      "fiche": [
+        [
+          "Lieu",
+          "Rue du Temple, ville haute de Briançon (Hautes-Alpes)"
+        ],
+        [
+          "Patrimoine",
+          "Site patrimonial remarquable couvert par un plan de sauvegarde et de mise en valeur ; fortifications de Vauban inscrites au patrimoine mondial de l’UNESCO"
+        ],
+        [
+          "Programme",
+          "13 appartements dans deux immeubles : 7 du T1 au T3 en duplex, 6 du T1 au T2 en duplex"
+        ],
+        [
+          "Régime fiscal",
+          "Loi Malraux"
+        ],
+        [
+          "Part des travaux",
+          "81 % de l’investissement"
+        ],
+        [
+          "Avancement",
+          "En projet"
+        ]
+      ],
+      "sources": [
+        {
+          "titre": "Le secteur sauvegardé de Briançon",
+          "editeur": "Sites & Cités remarquables de France",
+          "url": "https://www.sites-cites.fr/app/uploads/2020/12/LE-SECTEUR-SAUVEGARDE-DE-BRIANCON.pdf"
+        }
+      ],
+      "liens": [
+        {
+          "titre": "Loi Malraux : conditions et taux",
+          "url": "/investir/#dispositifs"
+        },
+        {
+          "titre": "Investir dans l’ancien : vos questions",
+          "url": "/investir/#questions"
+        },
+        {
+          "titre": "Notre méthode de restauration",
+          "url": "/savoir-faire/#methode"
+        }
+      ],
+      "maj": "2026-11-12"
+    },
+    {
+      "slug": "hotel-thomas-de-la-valette-carpentras",
+      "nom": "Hôtel Thomas de la Valette",
+      "ville": "Carpentras",
+      "departement": "Vaucluse",
+      "code_postal": "84200",
+      "lieu": "Carpentras · Vaucluse",
+      "etiquette": "Monument historique classé",
+      "regime": "Monuments historiques et déficit foncier",
+      "logements": 21,
+      "titre": "Hôtel Thomas de la Valette : un hôtel particulier du XVIIIe siècle classé monument historique",
+      "titre_seo": "Monument historique à Carpentras : hôtel Thomas de la Valette · URBAIN V",
+      "description": "Carpentras : l’hôtel Thomas de la Valette, hôtel particulier du XVIIIe siècle classé monument historique, restauré par URBAIN V en 21 appartements, du T1 au T3.",
+      "chapo": "Au cœur de Carpentras, à 23 km d’Avignon, URBAIN V restaure un hôtel particulier reconstruit vers 1750 et classé monument historique : vingt et un appartements, du T1 au T3, éligibles au régime des monuments historiques et au déficit foncier.",
+      "carte": "Un hôtel particulier reconstruit vers 1750, riche de gypseries, de boiseries et de peintures, restauré en vingt et un appartements au cœur de Carpentras.",
+      "resume": [
+        [
+          "Programme",
+          "21 appartements, du T1 au T3"
+        ],
+        [
+          "Régime fiscal",
+          "Monuments historiques et déficit foncier"
+        ],
+        [
+          "Livraison",
+          "Prévue au deuxième trimestre 2027"
+        ]
+      ],
+      "fiche": [
+        [
+          "Lieu",
+          "Cœur de ville de Carpentras (Vaucluse), à 23 km d’Avignon"
+        ],
+        [
+          "Patrimoine",
+          "Hôtel particulier classé monument historique (arrêté du 12 octobre 1995)"
+        ],
+        [
+          "Programme",
+          "21 appartements, du T1 au T3"
+        ],
+        [
+          "Régime fiscal",
+          "Monuments historiques et déficit foncier, en association syndicale libre (ASL)"
+        ],
+        [
+          "Répartition du prix",
+          "16 % foncier, 84 % travaux"
+        ],
+        [
+          "Prix",
+          "À partir de 230 000 €"
+        ],
+        [
+          "Livraison",
+          "Prévue au deuxième trimestre 2027"
+        ],
+        [
+          "Architecte",
+          "Agence Escande"
+        ],
+        [
+          "Avancement",
+          "En projet"
+        ]
+      ],
+      "sources": [
+        {
+          "titre": "Ancien hôtel Thomas de la Valette, notice Mérimée PA00135630",
+          "editeur": "Ministère de la Culture, Plateforme ouverte du patrimoine",
+          "url": "https://pop.culture.gouv.fr/notice/merimee/PA00135630"
+        }
+      ],
+      "liens": [
+        {
+          "titre": "Le régime des monuments historiques",
+          "url": "/investir/#dispositifs"
+        },
+        {
+          "titre": "Investir dans l’ancien : vos questions",
+          "url": "/investir/#questions"
+        },
+        {
+          "titre": "Notre méthode de restauration",
+          "url": "/savoir-faire/#methode"
+        }
+      ],
+      "maj": "2026-11-12"
+    },
+    {
+      "slug": "la-grande-maison-contamine-sur-arve",
+      "nom": "La Grande Maison",
+      "ville": "Contamine-sur-Arve",
+      "departement": "Haute-Savoie",
+      "code_postal": "74130",
+      "lieu": "Contamine-sur-Arve · Haute-Savoie",
+      "etiquette": "Monument historique inscrit",
+      "regime": "Monuments historiques et déficit foncier",
+      "logements": 43,
+      "titre": "La Grande Maison : un ancien couvent du XVIIe siècle inscrit monument historique",
+      "titre_seo": "Monument historique en Haute-Savoie : La Grande Maison · URBAIN V",
+      "description": "À Contamine-sur-Arve, entre Genève et Annecy, URBAIN V restaure La Grande Maison, ancien couvent inscrit monument historique en 2025 : 43 appartements, du T1 au T3.",
+      "chapo": "Entre Genève et Annecy, URBAIN V restaure La Grande Maison, élevée au XVIIe siècle par les Barnabites sur le site d’un prieuré clunisien et inscrite au titre des monuments historiques en 2025 : quarante-trois appartements, du T1 au T3, éligibles au régime des monuments historiques et au déficit foncier.",
+      "carte": "Un ancien couvent des Barnabites, élevé sur le site d’un prieuré clunisien, restauré en quarante-trois appartements aux portes de Genève.",
+      "resume": [
+        [
+          "Programme",
+          "43 appartements, du T1 au T3"
+        ],
+        [
+          "Régime fiscal",
+          "Monuments historiques et déficit foncier"
+        ],
+        [
+          "Situation",
+          "À 25 minutes de Genève, 30 minutes d’Annecy"
+        ]
+      ],
+      "fiche": [
+        [
+          "Lieu",
+          "Contamine-sur-Arve (Haute-Savoie), à 25 minutes de Genève et 30 minutes d’Annecy"
+        ],
+        [
+          "Patrimoine",
+          "Façades, toitures et chapelle inscrites au titre des monuments historiques (arrêté du 22 juillet 2025)"
+        ],
+        [
+          "Programme",
+          "43 appartements, du T1 au T3, et un jardin attenant"
+        ],
+        [
+          "Régime fiscal",
+          "Monuments historiques et déficit foncier, en association syndicale libre (ASL)"
+        ],
+        [
+          "Répartition du prix",
+          "16 % foncier, 84 % travaux"
+        ],
+        [
+          "Architecte",
+          "Cabinet MAES"
+        ],
+        [
+          "Avancement",
+          "En projet"
+        ]
+      ],
+      "sources": [
+        {
+          "titre": "La Grande Maison, notice Mérimée PA74000060",
+          "editeur": "Ministère de la Culture, Plateforme ouverte du patrimoine",
+          "url": "https://pop.culture.gouv.fr/notice/merimee/PA74000060"
+        }
+      ],
+      "liens": [
+        {
+          "titre": "Le régime des monuments historiques",
+          "url": "/investir/#dispositifs"
+        },
+        {
+          "titre": "Investir dans l’ancien : vos questions",
+          "url": "/investir/#questions"
+        },
+        {
+          "titre": "Notre méthode de restauration",
+          "url": "/savoir-faire/#methode"
+        }
+      ],
+      "maj": "2026-11-12"
+    }
+  ]
+}

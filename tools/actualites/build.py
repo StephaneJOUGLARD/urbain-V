@@ -168,8 +168,8 @@ PAGE = '''<!doctype html>
 
 CTA = '''  <section class="band band-night">
     <div class="wrap cta-grid">
-      <div class="stack-lg"><p class="eyebrow">Avant-première</p><h2>Nos premières adresses se préparent.</h2><p class="lede">Recevez en priorité la présentation de nos opérations&nbsp;: histoire du lieu, plans, prestations, prix et calendrier.</p></div>
-      <div class="cta-actions"><a class="btn btn-solid" href="/operations/#avant-premiere">Être informé en avant-première</a></div>
+      <div class="stack-lg"><p class="eyebrow">Nos opérations</p><h2>Nos premières adresses.</h2><p class="lede">Découvrez nos opérations en projet et recevez en priorité leur présentation complète&nbsp;: histoire du lieu, plans, prestations, prix et calendrier.</p></div>
+      <div class="cta-actions"><a class="btn btn-solid" href="/operations/#en-projet">Découvrir nos opérations</a></div>
     </div>
   </section>'''
 

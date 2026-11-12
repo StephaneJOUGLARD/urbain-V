@@ -20,6 +20,7 @@ Site vitrine d'URBAIN V, rénovation immobilière de prestige à Grenoble : <htt
 | Savoir-faire | `/savoir-faire/` | `savoir-faire/index.html` |
 | Investir | `/investir/` | `investir/index.html` |
 | Opérations | `/operations/` | `operations/index.html` |
+| Opération (une par adresse) | `/operations/<slug>/` | générées par `tools/operations/build.py` |
 | Contact | `/contact/` | `contact/index.html` |
 | Mentions légales | `/mentions-legales/` | `mentions-legales/index.html` |
 | Page introuvable | — | `404.html` |

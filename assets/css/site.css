@@ -506,3 +506,21 @@ h1 .eyebrow{font-weight:400;line-height:1.5;margin-bottom:28px;text-wrap:wrap}
 .faq-a{display:grid;gap:12px;padding:0 0 24px;color:var(--ink-2);max-width:68ch}
 .faq-links a{color:var(--accent)}
 @media (prefers-reduced-motion: reduce){.faq summary::after{transition:none}}
+
+/* Opérations en projet : cartes et fiches */
+.op-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,2.4vw,36px)}
+.op-card{display:flex;flex-direction:column;gap:18px;min-width:0;padding:clamp(26px,2.6vw,40px);background:var(--paper);border-top:2px solid var(--brand)}
+.op-meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-family:var(--f-inscr);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+.op-tag{color:var(--accent)}
+.op-card h3{font-size:clamp(1.5rem,1.25rem + .8vw,2rem);line-height:1.12}
+.op-card h3 a{text-decoration:none;transition:color .2s}
+.op-card h3 a:hover{color:var(--accent)}
+.op-card > p:not(.op-meta){color:var(--ink-2)}
+.op-card .op-facts{margin-top:auto}
+.op-card .link-arrow{margin-top:4px}
+.op-facts{display:grid;gap:12px;margin:0}
+.op-facts div{display:grid;gap:3px;padding-top:12px;border-top:1px solid var(--line)}
+.op-facts dt{font-family:var(--f-inscr);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+.op-facts dd{margin:0;font-size:.95rem;line-height:1.5;color:var(--ink)}
+.op-aside .btn{width:100%}
+@media (max-width:1000px){.op-list{grid-template-columns:1fr}}
